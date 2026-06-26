@@ -29,15 +29,15 @@ export function Greeting() {
       <FadeIn delay={0.4}>
         <div className="flex flex-col items-center gap-6 font-serif text-wedding-text">
           {/* TODO: 혼주 및 신랑/신부 이름 수정 */}
-          <div className="flex items-center gap-4 text-lg">
-            <span className="w-24 text-right">임용석 · 김점하</span>
-            <span className="text-sm text-wedding-text/60">의 아들</span>
+          <div className="flex items-center gap-3 text-[17px] md:text-lg whitespace-nowrap">
+            <span className="w-32 text-right">임용석 · 김점하</span>
+            <span className="text-sm text-wedding-text/60 w-14 text-center">의 아들</span>
             <span className="w-12 text-left font-medium">재영</span>
           </div>
           
-          <div className="flex items-center gap-4 text-lg">
-            <span className="w-24 text-right">유성룡 · 모정희</span>
-            <span className="text-sm text-wedding-text/60">의 &nbsp; &nbsp; 딸</span>
+          <div className="flex items-center gap-3 text-[17px] md:text-lg whitespace-nowrap">
+            <span className="w-32 text-right">유성룡 · 모정희</span>
+            <span className="text-sm text-wedding-text/60 w-14 text-center">의 &nbsp; 딸</span>
             <span className="w-12 text-left font-medium">지영</span>
           </div>
         </div>
