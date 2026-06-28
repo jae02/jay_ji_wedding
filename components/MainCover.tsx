@@ -14,7 +14,7 @@ export function MainCover() {
           src="/images/main.jpg"
           alt="Wedding Main"
           fill
-          className="object-cover opacity-60"
+          className="object-contain opacity-80"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-wedding-bg/20 to-wedding-bg/90" />
