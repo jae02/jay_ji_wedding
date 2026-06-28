@@ -4,6 +4,7 @@ import { Gallery } from "@/components/Gallery";
 import { Calendar } from "@/components/Calendar";
 import { Location } from "@/components/Location";
 import { AccountInfo } from "@/components/AccountInfo";
+import { ShareButton } from "@/components/ShareButton";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Calendar />
       <Location />
       <AccountInfo />
+      <ShareButton />
       
       {/* Footer */}
       <footer className="w-full py-12 bg-wedding-bg text-center">
