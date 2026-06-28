@@ -13,16 +13,11 @@ declare global {
 export function ShareButton() {
   const [isCopied, setIsCopied] = useState(false);
 
-  useEffect(() => {
-    // 카카오 SDK 초기화
-    if (window.Kakao && !window.Kakao.isInitialized()) {
-      // 아까 받은 카카오 JavaScript 키 사용
-      window.Kakao.init("a4f0196a6c25aa2fbda2009e9fc7531f");
-    }
-  }, []);
-
   const handleKakaoShare = () => {
     if (window.Kakao) {
+      if (!window.Kakao.isInitialized()) {
+        window.Kakao.init("a4f0196a6c25aa2fbda2009e9fc7531f");
+      }
       window.Kakao.Share.sendDefault({
         objectType: "feed",
         content: {
