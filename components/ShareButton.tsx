@@ -24,6 +24,8 @@ export function ShareButton() {
           title: "임재영 & 유지영 결혼합니다",
           description: "2026년 11월 7일 토요일 오후 5시\n천호 라비니움",
           imageUrl: "https://jay-ji-wedding.vercel.app/images/main.jpg",
+          imageWidth: 800,
+          imageHeight: 800,
           link: {
             mobileWebUrl: "https://jay-ji-wedding.vercel.app",
             webUrl: "https://jay-ji-wedding.vercel.app",
