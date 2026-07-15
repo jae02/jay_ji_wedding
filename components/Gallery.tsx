@@ -48,60 +48,59 @@ export function Gallery() {
         alt={`Gallery ${index + 1}`}
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-        sizes="(max-width: 768px) 95vw, 500px"
+        sizes="(max-width: 768px) 100vw, 500px"
       />
     </div>
   );
 
   return (
     <>
-      {/* 사진들이 페이지 흐름 속에 자연스럽게 녹아드는 레이아웃 */}
-      <div className="max-w-lg mx-auto">
+      <div className="w-full">
 
-        {/* 1 — 풀블리드, 여백 없이 화면을 가득 채움 */}
+        {/* 1 — 풀블리드 */}
         <FadeIn>
           <Photo index={0} aspect="aspect-[5/7]" />
         </FadeIn>
 
         <div className="h-14" />
 
-        {/* 2, 3 — 왼쪽 크게 + 오른쪽 작게, 아래로 밀림 */}
-        <FadeIn className="flex gap-2.5 px-4 items-start">
+        {/* 2, 3 — 왼쪽 크게 + 오른쪽 작게 */}
+        <FadeIn className="flex gap-2 px-2 items-start">
           <div className="w-[58%]">
             <Photo index={1} aspect="aspect-[9/14]" />
           </div>
-          <div className="w-[42%] mt-16">
+          <div className="w-[42%] mt-12">
             <Photo index={2} aspect="aspect-[5/6]" />
           </div>
         </FadeIn>
 
-        <div className="h-20" />
+        <div className="h-16" />
 
-        {/* 4 — 작고 오른쪽으로 치우침, 여백이 말을 함 */}
-        <FadeIn className="pl-[35%] pr-5">
+        {/* 4 — 오른쪽 치우침 */}
+        <FadeIn className="pl-[22%] pr-2">
           <Photo index={3} aspect="aspect-[4/5]" />
         </FadeIn>
 
         <div className="h-12" />
 
-        {/* 5 — 넓게, 양쪽 살짝 패딩 */}
-        <FadeIn className="px-3">
+        {/* 5 — 거의 풀블리드 */}
+        <FadeIn>
           <Photo index={4} aspect="aspect-[7/10]" />
         </FadeIn>
 
-        <div className="h-16" />
+        <div className="h-14" />
 
-        {/* 6, 7 — 오른쪽 길쭉하게 + 왼쪽 납작, 위로 올림 */}
-        <FadeIn className="flex gap-2 px-6 items-end">
-          <div className="w-[45%] mb-10">
+        {/* 6, 7 — 오른쪽 길쭉 + 왼쪽 납작 */}
+        <FadeIn className="flex gap-2 px-3 items-end">
+          <div className="w-[44%] mb-8">
             <Photo index={5} aspect="aspect-[4/5]" />
           </div>
-          <div className="w-[55%]">
+          <div className="w-[56%]">
             <Photo index={6} aspect="aspect-[3/5]" />
           </div>
         </FadeIn>
 
-        <div className="h-24" />
+        <div className="h-20" />
 
         {/* 8 — 풀블리드 */}
         <FadeIn>
@@ -110,15 +109,15 @@ export function Gallery() {
 
         <div className="h-10" />
 
-        {/* 9 — 왼쪽에 작게, 쉬어가는 호흡 */}
-        <FadeIn className="pr-[40%] pl-4">
+        {/* 9 — 왼쪽 치우침 */}
+        <FadeIn className="pr-[25%] pl-2">
           <Photo index={8} aspect="aspect-[7/10]" />
         </FadeIn>
 
-        <div className="h-16" />
+        <div className="h-14" />
 
-        {/* 10, 11 — 넉넉한 간격의 두 장, 높이 다르게 */}
-        <FadeIn className="flex gap-4 px-3 items-start">
+        {/* 10, 11 — 두 장, 높이 엇갈림 */}
+        <FadeIn className="flex gap-2 px-2 items-start">
           <div className="w-[48%] mt-6">
             <Photo index={9} aspect="aspect-[5/8]" />
           </div>
@@ -127,66 +126,66 @@ export function Gallery() {
           </div>
         </FadeIn>
 
-        <div className="h-20" />
+        <div className="h-16" />
 
-        {/* 12 — 좁고 길게, 가운데 정렬. 시선 집중 */}
-        <FadeIn className="px-[22%]">
+        {/* 12 — 가운데, 약간 좁게 */}
+        <FadeIn className="px-[12%]">
           <Photo index={11} aspect="aspect-[3/5]" />
         </FadeIn>
 
         <div className="h-14" />
 
-        {/* 13 — 액자 사진. 풀블리드로 임팩트 */}
+        {/* 13 — 액자 사진, 풀블리드 */}
         <FadeIn>
           <Photo index={12} aspect="aspect-[4/5]" />
         </FadeIn>
 
-        <div className="h-18" />
+        <div className="h-16" />
 
-        {/* 14 — 오른쪽 치우침, 중간 크기 */}
-        <FadeIn className="pl-[28%] pr-3">
+        {/* 14 — 오른쪽 치우침 */}
+        <FadeIn className="pl-[18%] pr-2">
           <Photo index={13} aspect="aspect-[5/7]" />
         </FadeIn>
 
         <div className="h-12" />
 
-        {/* 15, 16 — 왼쪽 납작 + 오른쪽 크게 */}
-        <FadeIn className="flex gap-2.5 px-5 items-start">
-          <div className="w-[40%] mt-14">
+        {/* 15, 16 — 왼쪽 작게 + 오른쪽 크게 */}
+        <FadeIn className="flex gap-2 px-2 items-start">
+          <div className="w-[42%] mt-10">
             <Photo index={14} aspect="aspect-[5/6]" />
           </div>
-          <div className="w-[60%]">
+          <div className="w-[58%]">
             <Photo index={15} aspect="aspect-[5/8]" />
           </div>
         </FadeIn>
 
-        <div className="h-20" />
-
-        {/* 17 — 넓지만 여백 있게 */}
-        <FadeIn className="px-6">
-          <Photo index={16} aspect="aspect-[7/10]" />
-        </FadeIn>
-
         <div className="h-16" />
 
-        {/* 18 — 왼쪽으로 붙임, 작게 */}
-        <FadeIn className="pr-[38%] pl-3">
-          <Photo index={17} aspect="aspect-[4/5]" />
+        {/* 17 — 거의 풀블리드 */}
+        <FadeIn className="px-2">
+          <Photo index={16} aspect="aspect-[7/10]" />
         </FadeIn>
 
         <div className="h-14" />
 
-        {/* 19, 20 — 마무리 두 장 */}
-        <FadeIn className="flex gap-3 px-4 items-end">
-          <div className="w-[52%]">
+        {/* 18 — 왼쪽 치우침 */}
+        <FadeIn className="pr-[20%] pl-2">
+          <Photo index={17} aspect="aspect-[4/5]" />
+        </FadeIn>
+
+        <div className="h-12" />
+
+        {/* 19, 20 — 마무리 */}
+        <FadeIn className="flex gap-2 px-2 items-end">
+          <div className="w-[54%]">
             <Photo index={18} aspect="aspect-[9/14]" />
           </div>
-          <div className="w-[48%] mb-8">
+          <div className="w-[46%] mb-6">
             <Photo index={19} aspect="aspect-[5/7]" />
           </div>
         </FadeIn>
 
-        <div className="h-10" />
+        <div className="h-8" />
       </div>
 
       {/* Lightbox / Fullscreen Image Viewer */}
