@@ -45,14 +45,14 @@ export function Gallery() {
             </div>
           </FadeIn>
 
-          <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 px-8 pb-16 pt-8 -mx-4 md:mx-auto md:max-w-5xl">
+          <div className="flex flex-col items-center gap-12 px-6 pb-16 pt-8 md:max-w-2xl md:mx-auto">
             {images.map((src, index) => {
               const rotation = index % 2 === 0 ? 'rotate-[-2deg]' : 'rotate-[2deg]';
               return (
                 <FadeIn 
                   key={src} 
                   delay={0.1} 
-                  className={`relative shrink-0 snap-center w-[75vw] sm:w-[320px] aspect-[4/5] bg-white p-3 pb-12 md:p-4 md:pb-14 rounded-sm shadow-[0_15px_35px_-5px_rgba(0,0,0,0.15)] cursor-pointer transition-all duration-300 hover:rotate-0 hover:z-10 hover:scale-[1.02] ${rotation}`}
+                  className={`relative w-[85vw] max-w-[450px] aspect-[4/5] bg-white p-3 pb-12 md:p-5 md:pb-16 rounded-sm shadow-[0_15px_35px_-5px_rgba(0,0,0,0.15)] cursor-pointer transition-all duration-300 hover:rotate-0 hover:z-10 hover:scale-[1.02] ${rotation}`}
                 >
                   <div onClick={() => setSelectedIndex(index)} className="relative w-full h-full overflow-hidden border border-gray-100/50">
                     <Image
@@ -60,7 +60,7 @@ export function Gallery() {
                       alt={`Gallery image ${index + 1}`}
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-105"
-                      sizes="(max-width: 768px) 75vw, 320px"
+                      sizes="(max-width: 768px) 85vw, 450px"
                     />
                   </div>
                 </FadeIn>
