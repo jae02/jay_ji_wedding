@@ -34,10 +34,10 @@ export function Gallery() {
 
   return (
     <>
-      <section className="py-24 bg-wedding-beige">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-24 bg-wedding-beige overflow-hidden">
+        <div className="w-full">
           <FadeIn>
-            <div className="text-center mb-12">
+            <div className="text-center mb-10 px-6">
               <h2 className="text-xl md:text-2xl font-serif text-wedding-pink-dark tracking-widest mb-2">
                 GALLERY
               </h2>
@@ -45,24 +45,27 @@ export function Gallery() {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-            {images.map((src, index) => (
-              <FadeIn 
-                key={src} 
-                delay={0.1 * (index % 3)} 
-                className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-wedding-bg cursor-pointer"
-              >
-                <div onClick={() => setSelectedIndex(index)} className="w-full h-full">
-                  <Image
-                    src={src}
-                    alt={`Gallery image ${index + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                  />
-                </div>
-              </FadeIn>
-            ))}
+          <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 px-8 pb-16 pt-8 -mx-4 md:mx-auto md:max-w-5xl">
+            {images.map((src, index) => {
+              const rotation = index % 2 === 0 ? 'rotate-[-2deg]' : 'rotate-[2deg]';
+              return (
+                <FadeIn 
+                  key={src} 
+                  delay={0.1} 
+                  className={`relative shrink-0 snap-center w-[75vw] sm:w-[320px] aspect-[4/5] bg-white p-3 pb-12 md:p-4 md:pb-14 rounded-sm shadow-[0_15px_35px_-5px_rgba(0,0,0,0.15)] cursor-pointer transition-all duration-300 hover:rotate-0 hover:z-10 hover:scale-[1.02] ${rotation}`}
+                >
+                  <div onClick={() => setSelectedIndex(index)} className="relative w-full h-full overflow-hidden border border-gray-100/50">
+                    <Image
+                      src={src}
+                      alt={`Gallery image ${index + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                      sizes="(max-width: 768px) 75vw, 320px"
+                    />
+                  </div>
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </section>
