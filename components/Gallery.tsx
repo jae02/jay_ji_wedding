@@ -78,31 +78,36 @@ export function Gallery() {
           <Photo index={3} aspect="aspect-[4/3]" />
         </FadeIn>
 
-        {/* 2. 오른쪽 정렬 위치에 4개의 사진 배치 (전체 사이즈 약간 키움, 지그재그 배치) */}
-        <FadeIn className="ml-auto w-[78%] mt-16 mb-12 flex flex-col gap-2 pr-2">
-          {/* 1번째 줄: 가로(64%) + 세로(36%) */}
-          <div className="flex gap-2 w-full">
-            <div className="w-[64%]">
-              <Photo index={4} aspect="aspect-[4/3]" />
-            </div>
-            <div className="w-[36%]">
-              <Photo index={4} aspect="aspect-[3/4]" />
-            </div>
-          </div>
-          {/* 2번째 줄: 세로(36%) + 가로(64%) */}
-          <div className="flex gap-2 w-full">
-            <div className="w-[36%]">
-              <Photo index={4} aspect="aspect-[3/4]" />
-            </div>
-            <div className="w-[64%]">
-              <Photo index={4} aspect="aspect-[4/3]" />
-            </div>
-          </div>
+        {/* 2. 오른쪽 정렬, 크게 배치 (5번 사진) */}
+        <FadeIn className="ml-auto w-[85%] mt-16 mb-16">
+          <Photo index={4} aspect="aspect-[3/4]" />
         </FadeIn>
 
         {/* 3. 단독 배치 (8번 사진 - 풀블리드, 위아래 비대칭 크롭) */}
         <FadeIn className="w-full mb-16">
           <Photo index={7} aspect="aspect-[16/9]" objectPosition="50% 25%" />
+        </FadeIn>
+
+        {/* 4. 지그재그 4장 배치 (8번 아래에 배치) */}
+        <FadeIn className="ml-auto w-[78%] mt-16 mb-12 flex flex-col gap-2 pr-2">
+          {/* 1번째 줄: 가로(64%) + 세로(36%) */}
+          <div className="flex gap-2 w-full">
+            <div className="w-[64%]">
+              <Photo index={8} aspect="aspect-[4/3]" />
+            </div>
+            <div className="w-[36%]">
+              <Photo index={9} aspect="aspect-[3/4]" />
+            </div>
+          </div>
+          {/* 2번째 줄: 세로(36%) + 가로(64%) */}
+          <div className="flex gap-2 w-full">
+            <div className="w-[36%]">
+              <Photo index={10} aspect="aspect-[3/4]" />
+            </div>
+            <div className="w-[64%]">
+              <Photo index={11} aspect="aspect-[4/3]" />
+            </div>
+          </div>
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
