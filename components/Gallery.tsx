@@ -113,6 +113,11 @@ export function Gallery() {
           </div>
         </FadeIn>
 
+        {/* 4.5. 단독 크게 배치 (14번 사진) - 왼쪽 정렬 블록 바로 위 */}
+        <FadeIn className="w-[90%] mx-auto mb-24">
+          <Photo index={13} aspect="aspect-[4/5]" />
+        </FadeIn>
+
         {/* 5. 왼쪽 정렬 2장 (10번, 11번 사진) */}
         <FadeIn className="flex flex-col gap-6 w-[75%] px-4 mb-24">
           <Photo index={9} aspect="aspect-[4/5]" />
