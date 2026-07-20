@@ -87,9 +87,13 @@ export function Gallery() {
         </FadeIn>
 
         {/* 3. 단독 배치 (8번 사진 - 풀블리드, 위아래 비대칭 크롭) */}
-        <FadeIn className="w-full mb-16">
+        <FadeIn className="w-full">
           <Photo index={7} aspect="aspect-[16/9]" objectPosition="50% 25%" />
         </FadeIn>
+      </div>
+
+      {/* 하단 갤러리 섹션 (회색 섞인 아이보리 배경으로 전환) */}
+      <div className="w-full bg-[#E5E4DF] pt-20 pb-10">
 
         {/* 4. 지그재그 4장 배치 (여백을 넉넉하게 주어 눈이 편안하도록) */}
         <FadeIn className="w-full px-6 mt-20 mb-20 flex flex-col gap-6">
