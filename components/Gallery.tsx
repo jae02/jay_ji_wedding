@@ -57,10 +57,14 @@ export function Gallery() {
     <>
       <div className="w-full">
 
-        {/* 0. 가장 상단에 1, 2번 사진 (일단 기본 세로형태로 배치) */}
-        <FadeIn className="flex flex-col gap-6 w-[95%] mx-auto mb-16 pt-10">
-          <Photo index={0} aspect="aspect-[3/4]" />
-          <Photo index={1} aspect="aspect-[3/4]" />
+        {/* 0. 가장 상단에 1, 2번 사진 (반반씩 화면 가득 차게) */}
+        <FadeIn className="flex w-full mb-16 pt-10">
+          <div className="w-1/2">
+            <Photo index={0} aspect="aspect-[4/5]" />
+          </div>
+          <div className="w-1/2">
+            <Photo index={1} aspect="aspect-[4/5]" />
+          </div>
         </FadeIn>
 
         {/* 1. 왼쪽 정렬, 가로형태(Landscape) 사진 2개 (여백 없음) */}
