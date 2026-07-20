@@ -113,21 +113,29 @@ export function Gallery() {
           </div>
         </FadeIn>
 
-        {/* 4.5. 단독 크게 배치 (14번 사진) - 왼쪽 정렬 블록 바로 위 */}
+        {/* 4.5. 단독 크게 배치 (14번 메인 사진 - 안 잘리게 비율 2:3 적용) */}
         <FadeIn className="w-[90%] mx-auto mb-24">
-          <Photo index={13} aspect="aspect-[4/5]" />
+          <Photo index={13} aspect="aspect-[2/3]" />
         </FadeIn>
 
-        {/* 5. 왼쪽 정렬 2장 (10번, 11번 사진) */}
-        <FadeIn className="flex flex-col gap-6 w-[75%] px-4 mb-24">
-          <Photo index={9} aspect="aspect-[4/5]" />
-          <Photo index={10} aspect="aspect-[4/5]" />
+        {/* 5. 왼쪽 정렬 2장 나란히 1열 (10번, 11번 사진) */}
+        <FadeIn className="flex gap-2 w-[85%] px-4 mb-24">
+          <div className="w-1/2">
+            <Photo index={9} aspect="aspect-[3/4]" />
+          </div>
+          <div className="w-1/2">
+            <Photo index={10} aspect="aspect-[3/4]" />
+          </div>
         </FadeIn>
 
-        {/* 6. 오른쪽 정렬 2장 (9번, 12번 사진) */}
-        <FadeIn className="flex flex-col gap-6 w-[75%] ml-auto px-4 mb-20">
-          <Photo index={8} aspect="aspect-[4/5]" />
-          <Photo index={11} aspect="aspect-[4/5]" />
+        {/* 6. 오른쪽 정렬 2장 나란히 1열 (9번, 12번 사진) */}
+        <FadeIn className="flex gap-2 w-[85%] ml-auto px-4 mb-20">
+          <div className="w-1/2">
+            <Photo index={8} aspect="aspect-[3/4]" />
+          </div>
+          <div className="w-1/2">
+            <Photo index={11} aspect="aspect-[3/4]" />
+          </div>
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
