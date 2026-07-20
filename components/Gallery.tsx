@@ -78,12 +78,26 @@ export function Gallery() {
           <Photo index={3} aspect="aspect-[4/3]" />
         </FadeIn>
 
-        {/* 2. 오른쪽 정렬 위치에 4개의 사진 배치 (전체 사이즈 축소하여 왼쪽 여백 확보) */}
-        <FadeIn className="ml-auto w-[70%] mt-16 mb-12 grid grid-cols-2 gap-2 pr-2">
-          <Photo index={4} aspect="aspect-[4/5]" />
-          <Photo index={4} aspect="aspect-[4/5]" />
-          <Photo index={4} aspect="aspect-[4/5]" />
-          <Photo index={4} aspect="aspect-[4/5]" />
+        {/* 2. 오른쪽 정렬 위치에 4개의 사진 배치 (전체 사이즈 약간 키움, 지그재그 배치) */}
+        <FadeIn className="ml-auto w-[78%] mt-16 mb-12 flex flex-col gap-2 pr-2">
+          {/* 1번째 줄: 가로(64%) + 세로(36%) */}
+          <div className="flex gap-2 w-full">
+            <div className="w-[64%]">
+              <Photo index={4} aspect="aspect-[4/3]" />
+            </div>
+            <div className="w-[36%]">
+              <Photo index={4} aspect="aspect-[3/4]" />
+            </div>
+          </div>
+          {/* 2번째 줄: 세로(36%) + 가로(64%) */}
+          <div className="flex gap-2 w-full">
+            <div className="w-[36%]">
+              <Photo index={4} aspect="aspect-[3/4]" />
+            </div>
+            <div className="w-[64%]">
+              <Photo index={4} aspect="aspect-[4/3]" />
+            </div>
+          </div>
         </FadeIn>
 
         {/* 3. 단독 배치 (8번 사진 - 풀블리드, 위아래 비대칭 크롭) */}
