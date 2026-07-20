@@ -113,6 +113,18 @@ export function Gallery() {
           </div>
         </FadeIn>
 
+        {/* 5. 왼쪽 정렬 2장 (10번, 11번 사진) */}
+        <FadeIn className="flex flex-col gap-6 w-[75%] px-4 mb-24">
+          <Photo index={9} aspect="aspect-[4/5]" />
+          <Photo index={10} aspect="aspect-[4/5]" />
+        </FadeIn>
+
+        {/* 6. 오른쪽 정렬 2장 (9번, 12번 사진) */}
+        <FadeIn className="flex flex-col gap-6 w-[75%] ml-auto px-4 mb-20">
+          <Photo index={8} aspect="aspect-[4/5]" />
+          <Photo index={11} aspect="aspect-[4/5]" />
+        </FadeIn>
+
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
           <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
