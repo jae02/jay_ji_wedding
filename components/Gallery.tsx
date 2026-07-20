@@ -118,22 +118,14 @@ export function Gallery() {
           <Photo index={13} aspect="aspect-[2/3]" />
         </FadeIn>
 
-        {/* 5. 10번, 11번 사진 (왼쪽 높고 오른쪽 낮은 지그재그) */}
-        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mb-16">
-          <div className="w-[48%]">
+        {/* 5. 2열 지그재그 갤러리 (왼쪽 10,11번 / 오른쪽 9,12번) - 세로 간격 좁힘 */}
+        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mb-24">
+          <div className="flex flex-col gap-4 w-[48%]">
             <Photo index={9} aspect="aspect-[4/5]" />
-          </div>
-          <div className="w-[48%] mt-16">
             <Photo index={10} aspect="aspect-[4/5]" />
           </div>
-        </FadeIn>
-
-        {/* 6. 9번, 12번 사진 (왼쪽 높고 오른쪽 낮은 지그재그 반복) */}
-        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mb-20">
-          <div className="w-[48%]">
+          <div className="flex flex-col gap-4 w-[48%] mt-16">
             <Photo index={8} aspect="aspect-[4/5]" />
-          </div>
-          <div className="w-[48%] mt-16">
             <Photo index={11} aspect="aspect-[4/5]" />
           </div>
         </FadeIn>
