@@ -60,10 +60,10 @@ export function Gallery() {
         {/* 0. 가장 상단에 1, 2번 사진 (클래식 폴라로이드 스타일 - 정갈하고 우아하게) */}
         <FadeIn className="flex justify-center gap-5 w-full px-5 mb-16">
           <div className="w-1/2 bg-white p-2 pb-8 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.08)] border border-black/5 rounded-[1px] transition-transform hover:scale-[1.02] cursor-pointer">
-            <Photo index={0} aspect="aspect-[4/5]" />
+            <Photo index={0} aspect="aspect-[2/3]" />
           </div>
           <div className="w-1/2 bg-white p-2 pb-8 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.08)] border border-black/5 rounded-[1px] transition-transform hover:scale-[1.02] cursor-pointer mt-8">
-            <Photo index={1} aspect="aspect-[4/5]" />
+            <Photo index={1} aspect="aspect-[2/3]" />
           </div>
         </FadeIn>
 
