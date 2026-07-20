@@ -134,6 +134,13 @@ export function Gallery() {
           </div>
         </FadeIn>
 
+        {/* 6. 1열 3분할 배치 (15번, 20번 교차) */}
+        <FadeIn className="grid grid-cols-3 gap-2 w-full px-4 mb-20">
+          <Photo index={14} aspect="aspect-[4/5]" />
+          <Photo index={19} aspect="aspect-[4/5]" />
+          <Photo index={14} aspect="aspect-[4/5]" />
+        </FadeIn>
+
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
           <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
