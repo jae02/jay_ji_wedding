@@ -78,8 +78,8 @@ export function Gallery() {
           <Photo index={3} aspect="aspect-[4/3]" />
         </FadeIn>
 
-        {/* 2. 오른쪽 정렬 위치에 4개의 사진 배치 (5번 사진으로 임시 채움) */}
-        <FadeIn className="ml-auto w-[90%] mt-16 mb-12 grid grid-cols-2 gap-2 pr-2">
+        {/* 2. 오른쪽 정렬 위치에 4개의 사진 배치 (전체 사이즈 축소하여 왼쪽 여백 확보) */}
+        <FadeIn className="ml-auto w-[70%] mt-16 mb-12 grid grid-cols-2 gap-2 pr-2">
           <Photo index={4} aspect="aspect-[4/5]" />
           <Photo index={4} aspect="aspect-[4/5]" />
           <Photo index={4} aspect="aspect-[4/5]" />
