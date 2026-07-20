@@ -57,11 +57,22 @@ export function Gallery() {
     <>
       <div className="w-full">
 
-        {/* 1. 왼쪽 정렬, 가로형태(Landscape) 사진 2개 */}
-        <FadeIn className="flex flex-col gap-6 w-[85%] px-2 pt-10">
+        {/* 1. 왼쪽 정렬, 가로형태(Landscape) 사진 2개 (여백 없음) */}
+        <FadeIn className="flex flex-col gap-0 w-[85%]">
           <Photo index={2} aspect="aspect-[4/3]" />
           <Photo index={3} aspect="aspect-[4/3]" />
         </FadeIn>
+
+        {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
+        <div className="mt-16 px-1">
+          <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
+            {images.map((_, i) => (
+              <FadeIn key={i} delay={i * 0.03}>
+                <Photo index={i} aspect="aspect-square" />
+              </FadeIn>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Lightbox / Fullscreen Image Viewer */}
