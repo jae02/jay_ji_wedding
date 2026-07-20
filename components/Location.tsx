@@ -55,12 +55,12 @@ export function Location() {
               </div>
             ) : (
               <Map
-                center={{ lat: 37.53856, lng: 127.12328 }}
+                center={{ lat: 37.5385, lng: 127.1257 }}
                 style={{ width: "100%", height: "100%" }}
                 className="absolute inset-0"
                 level={4}
               >
-                <MapMarker position={{ lat: 37.53856, lng: 127.12328 }}>
+                <MapMarker position={{ lat: 37.5385, lng: 127.1257 }}>
                   <div className="text-black text-xs p-1 font-medium text-center w-full min-w-[90px]">
                     천호 라비니움
                   </div>
