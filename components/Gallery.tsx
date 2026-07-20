@@ -55,14 +55,14 @@ export function Gallery() {
 
   return (
     <>
-      <div className="w-full">
-
-        {/* 0. 가장 상단에 1, 2번 사진 (반반씩 화면 가득 차게) */}
-        <FadeIn className="flex w-full mb-16 pt-10">
-          <div className="w-1/2">
+      <div className="w-full bg-[#FFFDF9] py-10">
+        
+        {/* 0. 가장 상단에 1, 2번 사진 (폴라로이드 스타일) */}
+        <FadeIn className="flex justify-center gap-4 w-full px-5 mb-16">
+          <div className="w-1/2 bg-white p-2 pb-10 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] rounded-[2px] rotate-[-2deg] transition-transform hover:rotate-0 hover:scale-105 hover:z-10 cursor-pointer">
             <Photo index={0} aspect="aspect-[4/5]" />
           </div>
-          <div className="w-1/2">
+          <div className="w-1/2 bg-white p-2 pb-10 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] rounded-[2px] rotate-[3deg] transition-transform hover:rotate-0 hover:scale-105 hover:z-10 cursor-pointer mt-4">
             <Photo index={1} aspect="aspect-[4/5]" />
           </div>
         </FadeIn>
