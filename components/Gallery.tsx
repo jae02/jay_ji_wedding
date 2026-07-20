@@ -91,10 +91,10 @@ export function Gallery() {
           <Photo index={7} aspect="aspect-[16/9]" objectPosition="50% 25%" />
         </FadeIn>
 
-        {/* 4. 지그재그 4장 배치 (화면 전체 사용) */}
-        <FadeIn className="w-full px-2 mt-16 mb-12 flex flex-col gap-2">
+        {/* 4. 지그재그 4장 배치 (여백을 넉넉하게 주어 눈이 편안하도록) */}
+        <FadeIn className="w-full px-6 mt-20 mb-20 flex flex-col gap-6">
           {/* 1번째 줄: 가로(64%) + 세로(36%) */}
-          <div className="flex gap-2 w-full">
+          <div className="flex gap-4 w-full">
             <div className="w-[64%]">
               <Photo index={8} aspect="aspect-[4/3]" />
             </div>
@@ -103,7 +103,7 @@ export function Gallery() {
             </div>
           </div>
           {/* 2번째 줄: 세로(36%) + 가로(64%) */}
-          <div className="flex gap-2 w-full">
+          <div className="flex gap-4 w-full">
             <div className="w-[36%]">
               <Photo index={10} aspect="aspect-[3/4]" />
             </div>
