@@ -75,6 +75,11 @@ export function Gallery() {
           <Photo index={3} aspect="aspect-[4/3]" />
         </FadeIn>
 
+        {/* 2. 오른쪽 정렬, 크게 배치 (5번 사진) */}
+        <FadeIn className="ml-auto w-[85%] mt-16 mb-12">
+          <Photo index={4} aspect="aspect-[3/4]" />
+        </FadeIn>
+
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
           <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
