@@ -55,7 +55,7 @@ export function Gallery() {
 
   return (
     <>
-      <div className="w-full bg-[#FFFDF9] py-10">
+      <div className="w-full bg-[#F3EFE7] py-10">
         
         {/* 0. 가장 상단에 1, 2번 사진 (폴라로이드 스타일) */}
         <FadeIn className="flex justify-center gap-4 w-full px-5 mb-16">
