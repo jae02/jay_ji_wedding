@@ -80,9 +80,9 @@ export function Gallery() {
           <Photo index={4} aspect="aspect-[3/4]" />
         </FadeIn>
 
-        {/* 3. 와이드 가로형 배치 (8번 사진 - 크롭 덜 되도록 비율 조정 및 축소) */}
+        {/* 3. 단독 배치 (8번 사진 - 인물이 덜 잘리도록 세로를 길게 늘림) */}
         <FadeIn className="w-[85%] mx-auto mb-16">
-          <Photo index={7} aspect="aspect-[4/3]" />
+          <Photo index={7} aspect="aspect-square" />
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
