@@ -44,12 +44,6 @@ export function Location() {
         </FadeIn>
 
         <FadeIn delay={0.3}>
-          <div className="w-full mb-8 rounded-lg shadow-sm border border-wedding-beige overflow-hidden bg-white">
-            <img src="/images/map.png" alt="약도" className="w-full h-auto" />
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={0.4}>
           <div className="w-full relative overflow-hidden mb-6 flex items-center justify-center rounded-lg shadow-sm border border-wedding-beige aspect-square md:h-96">
             {loading ? (
               <div className="w-full h-full bg-gray-100 flex items-center justify-center absolute inset-0">
@@ -76,7 +70,7 @@ export function Location() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.5} className="flex gap-2 mb-12">
+        <FadeIn delay={0.4} className="flex gap-2 mb-12">
           <button 
             onClick={handleKakaoMap}
             className="flex-1 py-3 bg-[#FAE100] text-[#391B1B] rounded-md font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#F4D900] transition-colors"
@@ -91,7 +85,7 @@ export function Location() {
           </button>
         </FadeIn>
 
-        <FadeIn delay={0.6}>
+        <FadeIn delay={0.5}>
           <div className="space-y-6 text-sm text-wedding-text/80">
             <div>
               <h4 className="font-semibold text-wedding-text mb-2 flex items-center gap-2">
