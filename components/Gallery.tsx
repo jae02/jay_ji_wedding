@@ -80,8 +80,8 @@ export function Gallery() {
           <Photo index={4} aspect="aspect-[3/4]" />
         </FadeIn>
 
-        {/* 3. 단독 배치 (8번 사진 - 인물이 덜 잘리도록 세로를 길게 늘림) */}
-        <FadeIn className="w-[85%] mx-auto mb-16">
+        {/* 3. 단독 배치 (8번 사진 - 풀블리드, 정사각형 비율로 덜 잘리게) */}
+        <FadeIn className="w-full mb-16">
           <Photo index={7} aspect="aspect-square" />
         </FadeIn>
 
