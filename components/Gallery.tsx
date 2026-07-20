@@ -35,9 +35,11 @@ export function Gallery() {
   const Photo = ({
     index,
     aspect = "aspect-[3/4]",
+    objectPosition = "center",
   }: {
     index: number;
     aspect?: string;
+    objectPosition?: string;
   }) => (
     <div
       onClick={() => setSelectedIndex(index)}
@@ -49,6 +51,7 @@ export function Gallery() {
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         sizes="(max-width: 768px) 100vw, 500px"
+        style={{ objectPosition }}
       />
     </div>
   );
@@ -80,9 +83,9 @@ export function Gallery() {
           <Photo index={4} aspect="aspect-[3/4]" />
         </FadeIn>
 
-        {/* 3. 단독 배치 (8번 사진 - 풀블리드, 정사각형 비율로 덜 잘리게) */}
+        {/* 3. 단독 배치 (8번 사진 - 풀블리드, 위아래 비대칭 크롭) */}
         <FadeIn className="w-full mb-16">
-          <Photo index={7} aspect="aspect-square" />
+          <Photo index={7} aspect="aspect-[16/9]" objectPosition="50% 25%" />
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
