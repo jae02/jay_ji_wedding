@@ -58,7 +58,7 @@ export function Gallery() {
       <div className="w-full">
 
         {/* 1. 왼쪽 정렬, 가로형태(Landscape) 사진 2개 (여백 없음) */}
-        <FadeIn className="flex flex-col gap-0 w-[85%]">
+        <FadeIn className="flex flex-col gap-0 w-[65%]">
           <Photo index={2} aspect="aspect-[4/3]" />
           <Photo index={3} aspect="aspect-[4/3]" />
         </FadeIn>
