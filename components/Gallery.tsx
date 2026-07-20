@@ -118,23 +118,23 @@ export function Gallery() {
           <Photo index={13} aspect="aspect-[2/3]" />
         </FadeIn>
 
-        {/* 5. 왼쪽 정렬 2장 나란히 1열 (10번, 11번 사진) */}
-        <FadeIn className="flex gap-2 w-[85%] px-4 mb-24">
-          <div className="w-1/2">
-            <Photo index={9} aspect="aspect-[3/4]" />
+        {/* 5. 10번, 11번 사진 (왼쪽 높고 오른쪽 낮은 지그재그) */}
+        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mb-16">
+          <div className="w-[48%]">
+            <Photo index={9} aspect="aspect-[4/5]" />
           </div>
-          <div className="w-1/2">
-            <Photo index={10} aspect="aspect-[3/4]" />
+          <div className="w-[48%] mt-16">
+            <Photo index={10} aspect="aspect-[4/5]" />
           </div>
         </FadeIn>
 
-        {/* 6. 오른쪽 정렬 2장 나란히 1열 (9번, 12번 사진) */}
-        <FadeIn className="flex gap-2 w-[85%] ml-auto px-4 mb-20">
-          <div className="w-1/2">
-            <Photo index={8} aspect="aspect-[3/4]" />
+        {/* 6. 9번, 12번 사진 (왼쪽 높고 오른쪽 낮은 지그재그 반복) */}
+        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mb-20">
+          <div className="w-[48%]">
+            <Photo index={8} aspect="aspect-[4/5]" />
           </div>
-          <div className="w-1/2">
-            <Photo index={11} aspect="aspect-[3/4]" />
+          <div className="w-[48%] mt-16">
+            <Photo index={11} aspect="aspect-[4/5]" />
           </div>
         </FadeIn>
 
