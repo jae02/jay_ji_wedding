@@ -44,6 +44,12 @@ export function Location() {
         </FadeIn>
 
         <FadeIn delay={0.3}>
+          <div className="w-full mb-8 rounded-lg shadow-sm border border-wedding-beige overflow-hidden bg-white">
+            <img src="/images/map.png" alt="약도" className="w-full h-auto" />
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.4}>
           <div className="w-full relative overflow-hidden mb-6 flex items-center justify-center rounded-lg shadow-sm border border-wedding-beige aspect-square md:h-96">
             {loading ? (
               <div className="w-full h-full bg-gray-100 flex items-center justify-center absolute inset-0">
@@ -70,7 +76,7 @@ export function Location() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.4} className="flex gap-2 mb-12">
+        <FadeIn delay={0.5} className="flex gap-2 mb-12">
           <button 
             onClick={handleKakaoMap}
             className="flex-1 py-3 bg-[#FAE100] text-[#391B1B] rounded-md font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#F4D900] transition-colors"
@@ -85,7 +91,7 @@ export function Location() {
           </button>
         </FadeIn>
 
-        <FadeIn delay={0.5}>
+        <FadeIn delay={0.6}>
           <div className="space-y-6 text-sm text-wedding-text/80">
             <div>
               <h4 className="font-semibold text-wedding-text mb-2 flex items-center gap-2">
@@ -93,7 +99,7 @@ export function Location() {
                 지하철 안내
               </h4>
               <p className="leading-relaxed">
-                5호선, 8호선 천호역 10번 출구 (도보 1분)
+                5호선, 8호선 천호역 10번출구 바로 앞
               </p>
             </div>
             <div>
@@ -101,20 +107,40 @@ export function Location() {
                 <span className="w-1 h-4 bg-wedding-pink-dark inline-block" />
                 버스 안내
               </h4>
-              <p className="leading-relaxed">
-                '천호역' 또는 '천호사거리' 정류장 하차
+              <p className="leading-relaxed break-keep">
+                천호역 또는 천호사거리 하차<br />
+                <span className="text-[13px] text-wedding-text/60 mt-1 block leading-normal">
+                  130, 340, 341, 342, 370, 3214, 3316, 3318, 3321, 3411, 4318, 1-4, 13, 13-2, 16, 23, 30, N30, N31, 30-3, 112-1, 112-5, 1113, 1113-1, 1113-2, 1113-10, 1113-11, 3324, 강동 05, 공항버스 6200
+                </span>
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-wedding-text mb-2 flex items-center gap-2">
                 <span className="w-1 h-4 bg-wedding-pink-dark inline-block" />
-                주차 안내
+                공영주차장 안내
               </h4>
-              <p className="leading-relaxed">
-                천호지하공영주차장 (강동구 천호대로 1026-1)<br />
-                하객 1시간 30분 무료 주차<br />
-                (주차장에서 웨딩홀까지 셔틀버스 상시 운행)
-              </p>
+              <div className="space-y-4 leading-relaxed break-keep">
+                <p>
+                  천호역 지하상가와 연결, 천호역 10번출구 도보이용 가능<br />
+                  <span className="font-medium">네비게이션 주소검색:</span> 서울시 강동구 천호대로 1026-1<br />
+                  <span className="text-[13px] text-wedding-text/70">(천호역 6번출구 앞 / 천호지하공영주차장(천호입구) 지하 1, 2층)</span>
+                </p>
+                <div>
+                  <p className="font-medium">❶ 도보 이용 시</p>
+                  <p className="text-[13px] text-wedding-text/70 mt-1">
+                    천호지하공영주차장(천호입구) 주차 후 천호역 지하상가 현대백화점 방향 직진 천호역 10번 출구 앞
+                  </p>
+                </div>
+                <div>
+                  <p className="font-medium">❷ 셔틀버스 이용 시</p>
+                  <p className="text-[13px] text-wedding-text/70 mt-1">
+                    천호지하공영주차장(천호입구) 내부에서 탑승<br />
+                    주차 위치 기둥번호 A, B, C, D 20 - 60번 사이 운행<br />
+                    (주차하신 차량 앞에서 대기 후 탑승 / 주차위치 메모 / 웨딩진행 시에만 운영)
+                  </p>
+                </div>
+                <span className="text-red-500 font-medium text-[13px] mt-2 inline-block">* 주차가 어려우니 대중교통 이용을 추천드립니다.</span>
+              </div>
             </div>
           </div>
         </FadeIn>

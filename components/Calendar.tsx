@@ -32,7 +32,7 @@ export function Calendar() {
             <h2 className="text-xl md:text-2xl font-serif text-wedding-pink-dark tracking-widest mb-2">
               NOVEMBER
             </h2>
-            <p className="text-wedding-text/60 text-sm">2026년 11월 7일 토요일</p>
+            <p className="text-wedding-text/60 text-sm">2026년 11월 7일 토요일 오후 5시</p>
           </div>
         </FadeIn>
 

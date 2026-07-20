@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Serif_KR } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter", 
-});
-
-const notoSerifKr = Noto_Serif_KR({ 
-  weight: ["200", "300", "400", "500", "600"],
-  subsets: ["latin"],
-  variable: "--font-noto-serif-kr",
+const dxMovie = localFont({
+  src: "./fonts/DXMSubtitlesStd-M.otf",
+  variable: "--font-dx-movie",
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -33,7 +28,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${notoSerifKr.variable} antialiased bg-wedding-bg mx-auto max-w-md shadow-2xl overflow-x-hidden min-h-screen`}
+        className={`${dxMovie.variable} antialiased bg-wedding-bg mx-auto max-w-md shadow-2xl overflow-x-hidden min-h-screen`}
       >
         {children}
       </body>

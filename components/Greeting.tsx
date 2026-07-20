@@ -36,7 +36,7 @@ export function Greeting() {
           </div>
           
           <div className="flex items-center gap-3 text-[17px] md:text-lg whitespace-nowrap">
-            <span className="w-32 text-right">유성룡 · 모정희</span>
+            <span className="w-32 text-right">유성용 · 모정희</span>
             <span className="text-sm text-wedding-text/60 w-14 text-center">의 &nbsp; 딸</span>
             <span className="w-16 text-left font-medium">유지영</span>
           </div>
