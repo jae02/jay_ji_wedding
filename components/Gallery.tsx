@@ -49,10 +49,12 @@ export function Gallery() {
         src={images[index]}
         alt={`Gallery ${index + 1}`}
         fill
-        className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+        className="object-cover transition-transform duration-700 group-hover:scale-[1.03] contrast-[0.85] saturate-[0.85] sepia-[0.1]"
         sizes="(max-width: 768px) 100vw, 500px"
         style={{ objectPosition }}
       />
+      {/* 필름 카메라 특유의 뿌옇고 따뜻한 질감을 위한 오버레이 */}
+      <div className="absolute inset-0 bg-[#E5E3DB]/20 mix-blend-screen pointer-events-none z-10" />
     </div>
   );
 
@@ -209,10 +211,11 @@ export function Gallery() {
                 src={images[selectedIndex]}
                 alt={`Gallery full view ${selectedIndex + 1}`}
                 fill
-                className="object-contain"
+                className="object-contain contrast-[0.85] saturate-[0.85] sepia-[0.1]"
                 sizes="100vw"
                 priority
               />
+              <div className="absolute inset-0 bg-[#E5E3DB]/20 mix-blend-screen pointer-events-none z-10" />
             </div>
 
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm tracking-widest font-sans">
