@@ -49,12 +49,12 @@ export function Gallery() {
         src={images[index]}
         alt={`Gallery ${index + 1}`}
         fill
-        className="object-cover transition-transform duration-700 group-hover:scale-[1.03] contrast-[0.95] saturate-[0.9] sepia-[0.05]"
+        className="object-cover transition-transform duration-700 group-hover:scale-[1.03] contrast-[0.97] saturate-[0.95] sepia-[0.02]"
         sizes="(max-width: 768px) 100vw, 500px"
         style={{ objectPosition }}
       />
-      {/* 필름 카메라 특유의 뿌옇고 따뜻한 질감을 위한 오버레이 (약하게 조절) */}
-      <div className="absolute inset-0 bg-[#E5E3DB]/10 mix-blend-screen pointer-events-none z-10" />
+      {/* 필름 카메라 특유의 뿌옇고 따뜻한 질감을 위한 오버레이 (절반으로 더 약하게 조절) */}
+      <div className="absolute inset-0 bg-[#E5E3DB]/5 mix-blend-screen pointer-events-none z-10" />
     </div>
   );
 
