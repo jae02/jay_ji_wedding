@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-wedding-bg: #ffffff;
-  --color-wedding-text: #1a1a1a;
-  --color-wedding-pink: #a3a3a3;
-  --color-wedding-pink-dark: #262626;
-  --color-wedding-beige: #f5f5f5;
+  --color-wedding-bg: #fcf9f2;
+  --color-wedding-text: #2b2824;
+  --color-wedding-pink: #a3958f;
+  --color-wedding-pink-dark: #3a322e;
+  --color-wedding-beige: #efebe1;
   
   --font-serif: var(--font-dx-movie);
   --font-sans: var(--font-dx-movie);
@@ -19,9 +19,28 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-dx-movie), var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Film camera grain overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Light warm filter over the main content */
+main {
+  filter: sepia(0.08) contrast(0.96) brightness(0.99);
 }
 
 /* Hide scrollbar for gallery if needed */
