@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
-
-const dxMovie = localFont({
-  src: "./fonts/DXMSubtitlesStd-M.otf",
-  variable: "--font-dx-movie",
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: "임재영 & 유지영의 모바일 청첩장",
@@ -28,7 +21,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${dxMovie.variable} antialiased bg-wedding-bg mx-auto max-w-md shadow-2xl overflow-x-hidden min-h-screen`}
+        className="antialiased bg-wedding-bg mx-auto max-w-md shadow-2xl overflow-x-hidden min-h-screen"
       >
         {children}
       </body>
