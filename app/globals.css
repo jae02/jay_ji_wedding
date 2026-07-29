@@ -9,11 +9,11 @@
 }
 
 @theme {
-  --color-wedding-bg: #ffffff;
-  --color-wedding-text: #1a1a1a;
-  --color-wedding-pink: #a3a3a3;
-  --color-wedding-pink-dark: #262626;
-  --color-wedding-beige: #f5f5f5;
+  --color-wedding-bg: #F9F8F5;
+  --color-wedding-text: #3B3530;
+  --color-wedding-pink: #EEDCD3;
+  --color-wedding-pink-dark: #C9A2A0;
+  --color-wedding-beige: #EFEBE3;
   
   --font-serif: 'DXMovie', serif;
   --font-sans: 'DXMovie', sans-serif;

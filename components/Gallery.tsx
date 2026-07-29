@@ -11,36 +11,66 @@ export function Gallery() {
 
   const images = [
     "/images/gallery/1.jpg",
-    "/images/gallery/2.jpg",
-    "/images/gallery/3.jpg",
-    "/images/gallery/4.jpg",
-    "/images/gallery/5.jpg",
-    "/images/gallery/6.jpg",
-    "/images/gallery/7.jpg",
-    "/images/gallery/8.jpg",
-    "/images/gallery/9.jpg",
     "/images/gallery/10.jpg",
+    "/images/gallery/11-1.jpg",
     "/images/gallery/11.jpg",
+    "/images/gallery/12-1.jpg",
+    "/images/gallery/12-2.jpg",
     "/images/gallery/12.jpg",
-    "/images/gallery/13_frame.jpg",
+    "/images/gallery/13.jpg",
     "/images/gallery/14.jpg",
     "/images/gallery/15.jpg",
     "/images/gallery/16.jpg",
     "/images/gallery/17.jpg",
     "/images/gallery/18.jpg",
-    "/images/gallery/19.jpg",
+    "/images/gallery/2-1.jpg",
+    "/images/gallery/2.jpg",
+    "/images/gallery/20-1.jpg",
     "/images/gallery/20.jpg",
+    "/images/gallery/3.jpg",
+    "/images/gallery/3-1.jpg",
+    "/images/gallery/4.jpg",
+    "/images/gallery/5-1.jpg",
+    "/images/gallery/5.jpg",
+    "/images/gallery/6-1.jpg",
+    "/images/gallery/6-2.jpg",
+    "/images/gallery/6.jpg",
+    "/images/gallery/7-1.jpg",
+    "/images/gallery/7-2.jpg",
+    "/images/gallery/7-3.jpg",
+    "/images/gallery/7-4.jpg",
+    "/images/gallery/7.jpg",
+    "/images/gallery/8.jpg",
+    "/images/gallery/9-1.jpg",
+    "/images/gallery/9-2.jpg",
+    "/images/gallery/9.jpg",
+    "/images/gallery/f1.jpg",
+    "/images/gallery/h1.jpg",
+    "/images/gallery/h10.jpg",
+    "/images/gallery/h2.jpg",
+    "/images/gallery/h3.jpg",
+    "/images/gallery/h4.jpg",
+    "/images/gallery/h8.jpg",
+    "/images/gallery/i1.jpg",
+    "/images/gallery/i2.jpg",
+    "/images/gallery/i3.jpg",
+    "/images/gallery/i4.jpg"
   ];
 
   const Photo = ({
-    index,
+    name,
     aspect = "aspect-[3/4]",
     objectPosition = "center",
   }: {
-    index: number;
+    name: string;
     aspect?: string;
     objectPosition?: string;
-  }) => (
+  }) => {
+    // Find index from name dynamically
+    const index = images.findIndex(img => img.endsWith("/" + name));
+    if (index === -1) return null; // Safe fallback if image is missing
+
+    return (
     <div
       onClick={() => setSelectedIndex(index)}
       className={`relative w-full ${aspect} overflow-hidden rounded-[3px] cursor-pointer group`}
@@ -57,98 +87,107 @@ export function Gallery() {
       <div className="absolute inset-0 bg-[#E5E3DB]/5 mix-blend-screen pointer-events-none z-10" />
     </div>
   );
+  };
 
   return (
     <>
-      <div className="w-full bg-[#F3EFE7] pt-10">
+      <div className="w-full bg-wedding-bg pt-10">
         
-        {/* 0. 가장 상단에 1, 2번 사진 (클래식 폴라로이드 스타일 - 정갈하고 우아하게) */}
+        {/* 0. 가장 상단에 f1, 2번 사진 */}
         <FadeIn className="flex justify-center gap-5 w-full px-5 mb-16">
           <div className="w-1/2 bg-white p-2 pb-8 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.08)] border border-black/5 rounded-[1px] transition-transform hover:scale-[1.02] cursor-pointer">
-            <Photo index={0} aspect="aspect-[2/3]" />
+            <Photo name="1.jpg" aspect="aspect-[2/3]" />
           </div>
           <div className="w-1/2 bg-white p-2 pb-8 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.08)] border border-black/5 rounded-[1px] transition-transform hover:scale-[1.02] cursor-pointer mt-8">
-            <Photo index={1} aspect="aspect-[2/3]" />
+            <Photo name="2.jpg" aspect="aspect-[2/3]" />
           </div>
         </FadeIn>
 
         {/* 1. 왼쪽 정렬, 가로형태(Landscape) 사진 3개 (위아래 여백, 사이 간격 추가) */}
         <FadeIn className="flex flex-col gap-2 w-[65%] my-6">
-          <Photo index={2} aspect="aspect-[4/3]" />
-          {/* 3, 4번 사이 추가 (임시로 3번 채움) */}
-          <Photo index={2} aspect="aspect-[4/3]" />
-          <Photo index={3} aspect="aspect-[4/3]" />
+          <Photo name="3.jpg" aspect="aspect-[4/3]" />
+          <Photo name="3-1.jpg" aspect="aspect-[4/3]" />
+          <Photo name="4.jpg" aspect="aspect-[4/3]" />
         </FadeIn>
 
-        {/* 2. 오른쪽 정렬, 4분할 배치 (5번 사진 4개) */}
+        {/* 2. 오른쪽 정렬, 2분할 배치 (5번 사진 2개 나란히) */}
         <FadeIn className="ml-auto w-[70%] mt-16 mb-16 grid grid-cols-2 gap-2 pr-2">
-          <Photo index={4} aspect="aspect-[4/5]" />
-          <Photo index={4} aspect="aspect-[4/5]" />
-          <Photo index={4} aspect="aspect-[4/5]" />
-          <Photo index={4} aspect="aspect-[4/5]" />
+          <Photo name="5.jpg" aspect="aspect-[2/3]" objectPosition="top" />
+          <Photo name="5.jpg" aspect="aspect-[2/3]" objectPosition="top" />
         </FadeIn>
 
         {/* 3. 단독 배치 (8번 사진 - 풀블리드, 위아래 비대칭 크롭) */}
         <FadeIn className="w-full">
-          <Photo index={7} aspect="aspect-[16/9]" objectPosition="50% 25%" />
+          <Photo name="8.jpg" aspect="aspect-[16/9]" objectPosition="50% 25%" />
         </FadeIn>
       </div>
 
       {/* 하단 갤러리 섹션 (회색 섞인 아이보리 배경으로 전환) */}
-      <div className="w-full bg-[#E5E4DF] pt-20 pb-10">
+      <div className="w-full bg-wedding-beige pt-20 pb-10">
 
-        {/* 4. 지그재그 4장 배치 (여백을 넉넉하게 주어 눈이 편안하도록) */}
-        <FadeIn className="w-full px-6 mt-20 mb-20 flex flex-col gap-6">
-          {/* 1번째 줄: 가로(64%) + 세로(36%) */}
-          <div className="flex gap-4 w-full">
-            <div className="w-[64%]">
-              <Photo index={5} aspect="aspect-[4/3]" />
-            </div>
-            <div className="w-[36%]">
-              <Photo index={6} aspect="aspect-[3/4]" />
-            </div>
+        {/* 4. 세로폭포 지그재그 (세로형 4장 배치 - 6, 7-2, 7, 7-1) */}
+        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mt-20 mb-32">
+          <div className="flex flex-col gap-4 w-[48%]">
+            <Photo name="6.jpg" aspect="aspect-[2/3]" />
+            <Photo name="7.jpg" aspect="aspect-[2/3]" />
           </div>
-          {/* 2번째 줄: 세로(36%) + 가로(64%) */}
-          <div className="flex gap-4 w-full">
-            <div className="w-[36%]">
-              <Photo index={6} aspect="aspect-[3/4]" />
-            </div>
-            <div className="w-[64%]">
-              <Photo index={5} aspect="aspect-[4/3]" />
-            </div>
+          <div className="flex flex-col gap-4 w-[48%] mt-16">
+            <Photo name="7-2.jpg" aspect="aspect-[2/3]" />
+            <Photo name="7-1.jpg" aspect="aspect-[2/3]" />
           </div>
         </FadeIn>
 
-        {/* 4.5. 단독 크게 배치 (14번 메인 사진 - 안 잘리게 비율 2:3 적용) */}
-        <FadeIn className="w-[90%] mx-auto mb-24">
-          <Photo index={13} aspect="aspect-[2/3]" />
+        {/* 4.5. 메인 9번 + 둥둥 떠다니는 9-1, 9-2 콜라주 */}
+        <FadeIn className="relative w-[85%] mx-auto mt-16 mb-32">
+          {/* 메인 사진 (9번) */}
+          <div className="w-full">
+            <Photo name="9.jpg" aspect="aspect-[2/3]" />
+          </div>
+          
+          {/* 둥둥 떠다니는 9-1번 사진 (좌측 상단) */}
+          <motion.div 
+            animate={{ y: [0, -12, 0] }} 
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            className="absolute -top-8 -left-6 w-[40%] z-20 shadow-2xl p-1 bg-white rounded-[1px] rotate-[-4deg]"
+          >
+            <Photo name="9-1.jpg" aspect="aspect-[2/3]" />
+          </motion.div>
+
+          {/* 둥둥 떠다니는 9-2번 사진 (우측 하단) */}
+          <motion.div 
+            animate={{ y: [0, 10, 0] }} 
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
+            className="absolute -bottom-10 -right-6 w-[45%] z-20 shadow-2xl p-1 bg-white rounded-[1px] rotate-[6deg]"
+          >
+            <Photo name="9-2.jpg" aspect="aspect-[2/3]" />
+          </motion.div>
         </FadeIn>
 
         {/* 5. 2열 지그재그 갤러리 (왼쪽 10,11번 / 오른쪽 9,12번) - 세로 간격 좁힘 */}
         <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mb-24">
           <div className="flex flex-col gap-4 w-[48%]">
-            <Photo index={9} aspect="aspect-[4/5]" />
-            <Photo index={10} aspect="aspect-[4/5]" />
+            <Photo name="10.jpg" aspect="aspect-[4/5]" />
+            <Photo name="11.jpg" aspect="aspect-[4/5]" />
           </div>
           <div className="flex flex-col gap-4 w-[48%] mt-16">
-            <Photo index={8} aspect="aspect-[4/5]" />
-            <Photo index={11} aspect="aspect-[4/5]" />
+            <Photo name="12.jpg" aspect="aspect-[4/5]" />
+            <Photo name="13.jpg" aspect="aspect-[4/5]" />
           </div>
         </FadeIn>
 
         {/* 6. 1열 3분할 배치 (15번, 20번 교차) */}
         <FadeIn className="grid grid-cols-3 gap-2 w-full px-4 mb-20">
-          <Photo index={14} aspect="aspect-[4/5]" />
-          <Photo index={19} aspect="aspect-[4/5]" />
-          <Photo index={14} aspect="aspect-[4/5]" />
+          <Photo name="15.jpg" aspect="aspect-[4/5]" />
+          <Photo name="20.jpg" aspect="aspect-[4/5]" />
+          <Photo name="15.jpg" aspect="aspect-[4/5]" />
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
           <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
-            {images.map((_, i) => (
+            {images.map((img, i) => (
               <FadeIn key={i} delay={i * 0.03}>
-                <Photo index={i} aspect="aspect-square" />
+                <Photo name={img.split('/').pop()!} aspect="aspect-square" />
               </FadeIn>
             ))}
           </div>

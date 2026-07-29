@@ -11,7 +11,7 @@ export function MainCover() {
       */}
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/images/main.jpg"
+          src="/images/gallery/f1.jpg"
           alt="Wedding Main"
           fill
           className="object-cover opacity-60"
