@@ -133,7 +133,7 @@ export function Location() {
                     (주차하신 차량 앞에서 대기 후 탑승 / 주차위치 메모 / 웨딩진행 시에만 운영)
                   </p>
                 </div>
-                <span className="text-red-500 font-medium text-[13px] mt-2 inline-block">* 주차가 어려우니 대중교통 이용을 추천드립니다.</span>
+                <span className="text-red-500 font-medium text-[13px] mt-2 inline-block leading-relaxed break-keep">* 예식장 주차 공간이 협소하여 공영주차장 이용이 다소 번거로우실 수 있습니다.<br/>지하철역 바로 앞이라 접근성이 좋은 대중교통 이용을 추천드립니다.</span>
               </div>
             </div>
           </div>
