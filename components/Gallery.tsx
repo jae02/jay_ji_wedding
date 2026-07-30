@@ -4,12 +4,16 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import Image from "next/image";
 import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: 'center', dragFree: true },
+    [AutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -221,15 +225,13 @@ export function Gallery() {
                     key={i}
                     className="flex-shrink-0 w-[70%] sm:w-[50%] md:w-[40%] min-w-0 px-4 pt-6 pb-4"
                   >
-                    <motion.div
-                      animate={{ rotate: i % 2 === 0 ? [-2.5, 2.5, -2.5] : [2.5, -2.5, 2.5] }}
-                      transition={{ repeat: Infinity, duration: 4 + (i % 3) * 0.5, ease: "easeInOut" }}
-                      className="bg-white p-3 pb-12 shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)] border border-black/5 rounded-[2px] origin-top relative"
+                    <div
+                      className={`bg-white p-3 pb-12 shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)] border border-black/5 rounded-[2px] relative transition-transform hover:scale-[1.02] ${i % 2 === 0 ? 'rotate-[3deg]' : 'rotate-[-3deg]'}`}
                     >
                       {/* 가랜드 마스킹 테이프 느낌 */}
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-[#e8e4d8] shadow-sm rotate-[-2deg] z-20 opacity-90 mix-blend-multiply" />
                       <Photo name={name} aspect="aspect-[2/3]" objectPosition="center" />
-                    </motion.div>
+                    </div>
                   </div>
                 ))}
             </div>
