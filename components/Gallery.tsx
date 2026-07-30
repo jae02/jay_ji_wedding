@@ -140,6 +140,10 @@ export function Gallery() {
           </div>
         </FadeIn>
 
+        {/* 5. 단독 크게 배치 (16번 사진) */}
+        <FadeIn className="w-[90%] mx-auto mt-16 mb-24">
+          <Photo name="16.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+        </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
