@@ -169,6 +169,11 @@ export function Gallery() {
           </div>
         </FadeIn>
 
+        {/* 6. h8번 사진 단독 크게 배치 */}
+        <FadeIn className="w-[85%] mx-auto mb-32">
+          <Photo name="h8.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+        </FadeIn>
+
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
           <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
