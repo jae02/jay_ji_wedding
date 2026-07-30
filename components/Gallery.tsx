@@ -139,7 +139,7 @@ export function Gallery() {
       <div className="w-full bg-wedding-beige pt-20 pb-10">
 
         {/* 4. 세로폭포 지그재그 (세로형 4장 배치 - 6, 7-2, 7, 7-1) */}
-        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mt-20 mb-32">
+        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mt-12 mb-16">
           <div className="flex flex-col gap-4 w-[48%]">
             <Photo name="6.jpg" aspect="aspect-[2/3]" />
             <Photo name="7.jpg" aspect="aspect-[2/3]" />
@@ -151,7 +151,7 @@ export function Gallery() {
         </FadeIn>
 
         {/* 5. 16번 사진 크게 배치 + 위에 작게 둥둥 떠다니는 4장 콜라주 */}
-        <FadeIn className="relative w-[85%] mx-auto mt-24 mb-32">
+        <FadeIn className="relative w-[85%] mx-auto mt-16 mb-20">
           {/* 메인 16번 사진 */}
           <div className="w-full">
             <Photo name="16.jpg" aspect="aspect-[2/3]" objectPosition="center" />
@@ -180,7 +180,7 @@ export function Gallery() {
         </FadeIn>
 
         {/* 6. h8번 사진 단독 크게 배치 */}
-        <FadeIn className="w-[85%] mx-auto mb-24">
+        <FadeIn className="w-[85%] mx-auto mb-16">
           <Photo name="h8.jpg" aspect="aspect-[2/3]" objectPosition="center" />
         </FadeIn>
 
@@ -192,17 +192,17 @@ export function Gallery() {
         </FadeIn>
 
         {/* 8. h4번 사진 단독 크게 배치 */}
-        <FadeIn className="ml-auto w-[75%] mb-32 pr-4">
+        <FadeIn className="ml-auto w-[75%] mb-16 pr-4">
           <Photo name="h4.jpg" aspect="aspect-[2/1]" objectPosition="50% 25%" />
         </FadeIn>
 
         {/* 9. 18번 사진 마지막으로 크게 배치 */}
-        <FadeIn className="w-[85%] mx-auto mb-32">
+        <FadeIn className="w-[85%] mx-auto mb-16">
           <Photo name="18.jpg" aspect="aspect-[2/3]" objectPosition="center" />
         </FadeIn>
 
         {/* 10. 남은 사진들 폴라로이드 가로 스크롤 (무한 반복) */}
-        <FadeIn className="relative w-full mt-12 mb-32 group">
+        <FadeIn className="relative w-full mt-8 mb-20 group">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex touch-pan-y py-4">
               {images
@@ -222,7 +222,7 @@ export function Gallery() {
                     className="flex-shrink-0 w-[35%] sm:w-[25%] md:w-[20%] min-w-0 px-2 pt-6 pb-4"
                   >
                     <div
-                      className={`bg-white p-3 pb-12 shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)] border border-black/5 rounded-[2px] relative transition-transform hover:scale-[1.02] ${i % 2 === 0 ? 'rotate-[3deg]' : 'rotate-[-3deg]'}`}
+                      className={`bg-white p-[6px] pb-6 shadow-[0_6px_20px_-5px_rgba(0,0,0,0.15)] border border-black/5 rounded-[2px] relative transition-transform hover:scale-[1.02] ${i % 2 === 0 ? 'rotate-[3deg]' : 'rotate-[-3deg]'}`}
                     >
                       {/* 가랜드 마스킹 테이프 느낌 */}
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-[#e8e4d8] shadow-sm rotate-[-2deg] z-20 opacity-90 mix-blend-multiply" />
