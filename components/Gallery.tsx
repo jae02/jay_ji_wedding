@@ -45,7 +45,6 @@ export function Gallery() {
     "/images/gallery/18.jpg",
     // --- Carousel Images (Remaining) ---
     "/images/gallery/10.jpg",
-    "/images/gallery/11-1.jpg",
     "/images/gallery/12-1.jpg",
     "/images/gallery/12-2.jpg",
     "/images/gallery/13_frame.jpg",
