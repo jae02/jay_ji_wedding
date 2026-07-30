@@ -147,10 +147,7 @@ export function Gallery() {
             <Photo name="13.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           </div>
           
-          {/* 플로팅 사진 1 (좌측 상단) */}
-          <div className="absolute top-4 -left-6 w-[20%] z-20 shadow-lg rounded-[1px]">
-            <Photo name="10.jpg" aspect="aspect-[2/3]" objectPosition="center" />
-          </div>
+
 
           {/* 플로팅 사진 2 (우측 상단) */}
           <div className="absolute top-12 -right-5 w-[20%] z-20 shadow-lg rounded-[1px]">
