@@ -170,8 +170,15 @@ export function Gallery() {
         </FadeIn>
 
         {/* 6. h8번 사진 단독 크게 배치 */}
-        <FadeIn className="w-[85%] mx-auto mb-32">
+        <FadeIn className="w-[85%] mx-auto mb-24">
           <Photo name="h8.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+        </FadeIn>
+
+        {/* 7. 우측 정렬 3칸 배치 (h1, h2, h3) */}
+        <FadeIn className="ml-auto w-[90%] mb-32 grid grid-cols-3 gap-2 pr-4">
+          <Photo name="h1.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+          <Photo name="h2.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+          <Photo name="h3.jpg" aspect="aspect-[2/3]" objectPosition="center" />
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
