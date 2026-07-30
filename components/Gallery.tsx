@@ -165,7 +165,7 @@ export function Gallery() {
           </div>
           
           {/* 플로팅 사진 5 (중앙 우측) */}
-          <div className="absolute top-1/2 -translate-y-1/2 -right-8 w-[18%] z-20 shadow-lg rounded-[1px]">
+          <div className="absolute top-1/2 -translate-y-1/2 -right-16 w-[18%] z-20 shadow-lg rounded-[1px]">
             <Photo name="15.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           </div>
         </FadeIn>
