@@ -219,11 +219,17 @@ export function Gallery() {
                 .map((name, i) => (
                   <div
                     key={i}
-                    className="flex-shrink-0 w-[60%] sm:w-[40%] md:w-[30%] min-w-0 px-3"
+                    className="flex-shrink-0 w-[70%] sm:w-[50%] md:w-[40%] min-w-0 px-4 pt-6 pb-4"
                   >
-                    <div className="bg-white p-2 pb-10 shadow-[0_8px_30px_-5px_rgba(0,0,0,0.15)] border border-black/5 rounded-[2px] transition-transform hover:scale-[1.02] rotate-[-1deg] even:rotate-[2deg]">
+                    <motion.div
+                      animate={{ rotate: i % 2 === 0 ? [-2.5, 2.5, -2.5] : [2.5, -2.5, 2.5] }}
+                      transition={{ repeat: Infinity, duration: 4 + (i % 3) * 0.5, ease: "easeInOut" }}
+                      className="bg-white p-3 pb-12 shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)] border border-black/5 rounded-[2px] origin-top relative"
+                    >
+                      {/* 가랜드 마스킹 테이프 느낌 */}
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-[#e8e4d8] shadow-sm rotate-[-2deg] z-20 opacity-90 mix-blend-multiply" />
                       <Photo name={name} aspect="aspect-[2/3]" objectPosition="center" />
-                    </div>
+                    </motion.div>
                   </div>
                 ))}
             </div>
