@@ -2,12 +2,22 @@
 
 import { FadeIn } from "@/components/ui/FadeIn";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   const images = [
     "/images/gallery/1.jpg",
@@ -191,31 +201,47 @@ export function Gallery() {
           <Photo name="18.jpg" aspect="aspect-[2/3]" objectPosition="center" />
         </FadeIn>
 
-        {/* 10. 남은 사진들 폴라로이드 가로 스크롤 (Carousel) */}
-        <FadeIn className="w-full mt-12 mb-32">
-          <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory px-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            {images
-              .map((img) => img.split("/").pop()!)
-              .filter(
-                (name) =>
-                  ![
-                    "1.jpg", "2.jpg", "3.jpg", "3-1.jpg", "4.jpg", "5.jpg", "8.jpg",
-                    "6.jpg", "7.jpg", "7-2.jpg", "7-1.jpg", "16.jpg", "11.jpg", "12.jpg",
-                    "13.jpg", "14.jpg", "h8.jpg", "h1.jpg", "h2.jpg", "h3.jpg", "h4.jpg",
-                    "18.jpg",
-                  ].includes(name)
-              )
-              .map((name, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-[55%] sm:w-[35%] md:w-[25%] snap-center"
-                >
-                  <div className="bg-white p-2 pb-10 shadow-[0_8px_30px_-5px_rgba(0,0,0,0.15)] border border-black/5 rounded-[2px] transition-transform hover:scale-[1.02] rotate-[-1deg] even:rotate-[2deg]">
-                    <Photo name={name} aspect="aspect-[2/3]" objectPosition="center" />
+        {/* 10. 남은 사진들 폴라로이드 가로 스크롤 (무한 반복) */}
+        <FadeIn className="relative w-full mt-12 mb-32 group">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex touch-pan-y py-4">
+              {images
+                .map((img) => img.split("/").pop()!)
+                .filter(
+                  (name) =>
+                    ![
+                      "1.jpg", "2.jpg", "3.jpg", "3-1.jpg", "4.jpg", "5.jpg", "8.jpg",
+                      "6.jpg", "7.jpg", "7-2.jpg", "7-1.jpg", "16.jpg", "11.jpg", "12.jpg",
+                      "13.jpg", "14.jpg", "h8.jpg", "h1.jpg", "h2.jpg", "h3.jpg", "h4.jpg",
+                      "18.jpg",
+                    ].includes(name)
+                )
+                .map((name, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-[60%] sm:w-[40%] md:w-[30%] min-w-0 px-3"
+                  >
+                    <div className="bg-white p-2 pb-10 shadow-[0_8px_30px_-5px_rgba(0,0,0,0.15)] border border-black/5 rounded-[2px] transition-transform hover:scale-[1.02] rotate-[-1deg] even:rotate-[2deg]">
+                      <Photo name={name} aspect="aspect-[2/3]" objectPosition="center" />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
+          
+          {/* 반투명 화살표 */}
+          <button
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/50 text-black/60 shadow-md backdrop-blur-sm transition-opacity opacity-0 group-hover:opacity-100 hover:bg-white/80 z-30"
+            onClick={scrollPrev}
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/50 text-black/60 shadow-md backdrop-blur-sm transition-opacity opacity-0 group-hover:opacity-100 hover:bg-white/80 z-30"
+            onClick={scrollNext}
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
