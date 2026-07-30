@@ -4,16 +4,12 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import Image from "next/image";
 import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import AutoScroll from "embla-carousel-auto-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: 'center', dragFree: true },
-    [AutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: true })]
-  );
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center', dragFree: true });
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
