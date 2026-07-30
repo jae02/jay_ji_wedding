@@ -161,11 +161,11 @@ export function Gallery() {
 
           {/* 플로팅 사진 4 (우측 하단) */}
           <div className="absolute -bottom-2 -right-4 w-[22%] z-20 shadow-lg rounded-[1px]">
-            <Photo name="14.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+            <Photo name="13.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           </div>
           {/* 플로팅 사진 5 (우측 상단) */}
           <div className="absolute top-4 right-16 w-[20%] z-20 shadow-lg rounded-[1px]">
-            <Photo name="13.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+            <Photo name="14.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           </div>
         </FadeIn>
 
