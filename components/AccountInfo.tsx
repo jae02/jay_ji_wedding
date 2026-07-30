@@ -77,20 +77,20 @@ function AccountAccordion({ group }: { group: AccountGroup }) {
 }
 
 export function AccountInfo() {
-  // TODO: 실제 계좌 정보로 수정해주세요.
   const groomAccounts: AccountGroup = {
     title: "신랑측 계좌번호",
     accounts: [
-      { bank: "국민은행", number: "123456-78-901234", name: "임재영" },
-      { bank: "신한은행", number: "110-123-456789", name: "임용석" },
+      { bank: "국민은행", number: "624802-96-106590", name: "임용석 (신랑 아버지)" },
+      { bank: "국민은행", number: "946102-00-025611", name: "임재영 (신랑)" },
     ],
   };
 
   const brideAccounts: AccountGroup = {
     title: "신부측 계좌번호",
     accounts: [
-      { bank: "우리은행", number: "1002-123-456789", name: "유지영" },
-      { bank: "하나은행", number: "123-456789-01234", name: "모정희" },
+      { bank: "기업은행", number: "411-095121-01-013", name: "유성용 (신부 아버지)" },
+      { bank: "우리은행", number: "1002-747-760729", name: "모정희 (신부 어머니)" },
+      { bank: "하나은행", number: "284-910287-90607", name: "유지영 (신부)" },
     ],
   };
 
