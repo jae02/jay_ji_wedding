@@ -138,50 +138,6 @@ export function Gallery() {
           </div>
         </FadeIn>
 
-        {/* 4.5. 메인 9번 + 둥둥 떠다니는 9-1, 9-2 콜라주 */}
-        <FadeIn className="relative w-[85%] mx-auto mt-16 mb-32">
-          {/* 메인 사진 (9번) */}
-          <div className="w-full">
-            <Photo name="9.jpg" aspect="aspect-[2/3]" />
-          </div>
-          
-          {/* 둥둥 떠다니는 9-1번 사진 (좌측 상단) */}
-          <motion.div 
-            animate={{ y: [0, -12, 0] }} 
-            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="absolute -top-8 -left-6 w-[40%] z-20 shadow-2xl p-1 bg-white rounded-[1px] rotate-[-4deg]"
-          >
-            <Photo name="9-1.jpg" aspect="aspect-[2/3]" />
-          </motion.div>
-
-          {/* 둥둥 떠다니는 9-2번 사진 (우측 하단) */}
-          <motion.div 
-            animate={{ y: [0, 10, 0] }} 
-            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-            className="absolute -bottom-10 -right-6 w-[45%] z-20 shadow-2xl p-1 bg-white rounded-[1px] rotate-[6deg]"
-          >
-            <Photo name="9-2.jpg" aspect="aspect-[2/3]" />
-          </motion.div>
-        </FadeIn>
-
-        {/* 5. 2열 지그재그 갤러리 (왼쪽 10,11번 / 오른쪽 9,12번) - 세로 간격 좁힘 */}
-        <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mb-24">
-          <div className="flex flex-col gap-4 w-[48%]">
-            <Photo name="10.jpg" aspect="aspect-[4/5]" />
-            <Photo name="11.jpg" aspect="aspect-[4/5]" />
-          </div>
-          <div className="flex flex-col gap-4 w-[48%] mt-16">
-            <Photo name="12.jpg" aspect="aspect-[4/5]" />
-            <Photo name="13.jpg" aspect="aspect-[4/5]" />
-          </div>
-        </FadeIn>
-
-        {/* 6. 1열 3분할 배치 (15번, 20번 교차) */}
-        <FadeIn className="grid grid-cols-3 gap-2 w-full px-4 mb-20">
-          <Photo name="15.jpg" aspect="aspect-[4/5]" />
-          <Photo name="20.jpg" aspect="aspect-[4/5]" />
-          <Photo name="15.jpg" aspect="aspect-[4/5]" />
-        </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
