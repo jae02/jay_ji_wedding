@@ -111,10 +111,9 @@ export function Gallery() {
           <Photo name="4.jpg" aspect="aspect-[4/3]" />
         </FadeIn>
 
-        {/* 2. 오른쪽 정렬, 2분할 배치 (2-1번 사진 2개 나란히) */}
-        <FadeIn className="ml-auto w-[70%] mt-16 mb-16 grid grid-cols-2 gap-2 pr-2">
-          <Photo name="2-1.jpg" aspect="aspect-[2/3]" objectPosition="top" />
-          <Photo name="2-1.jpg" aspect="aspect-[2/3]" objectPosition="top" />
+        {/* 2. 오른쪽 정렬, 크게 1장 배치 (2-1번 사진) */}
+        <FadeIn className="ml-auto w-[85%] mt-16 mb-16 pr-4">
+          <Photo name="2-1.jpg" aspect="aspect-[3/4]" objectPosition="center" />
         </FadeIn>
 
         {/* 3. 단독 배치 (8번 사진 - 풀블리드, 위아래 비대칭 크롭) */}
