@@ -140,6 +140,21 @@ export function Gallery() {
           </div>
         </FadeIn>
 
+        {/* 4.5. 16번 사진 위 작은 사진 5장 배치 (임시 레이아웃) */}
+        <FadeIn className="w-[90%] mx-auto mt-20 mb-12">
+          {/* 상단 3장 */}
+          <div className="grid grid-cols-3 gap-2 mb-2">
+            <Photo name="10.jpg" aspect="aspect-[4/5]" />
+            <Photo name="11.jpg" aspect="aspect-[4/5]" />
+            <Photo name="12.jpg" aspect="aspect-[4/5]" />
+          </div>
+          {/* 하단 2장 */}
+          <div className="grid grid-cols-2 gap-2">
+            <Photo name="13.jpg" aspect="aspect-[4/5]" />
+            <Photo name="15.jpg" aspect="aspect-[4/5]" />
+          </div>
+        </FadeIn>
+
         {/* 5. 단독 크게 배치 (16번 사진) */}
         <FadeIn className="w-[90%] mx-auto mt-16 mb-24">
           <Photo name="16.jpg" aspect="aspect-[2/3]" objectPosition="center" />
