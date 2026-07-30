@@ -51,6 +51,7 @@ export function Gallery() {
     "/images/gallery/13_frame.jpg",
     "/images/gallery/15.jpg",
     "/images/gallery/17.jpg",
+    "/images/gallery/IMG_9772.JPG",
     "/images/gallery/2-1.jpg",
     "/images/gallery/20.jpg",
     "/images/gallery/5-1.jpg",
