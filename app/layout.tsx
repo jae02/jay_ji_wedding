@@ -5,6 +5,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "임재영 & 유지영의 모바일 청첩장",
   description: "2026년 11월 7일, 두 사람이 하나되는 날",
+  openGraph: {
+    title: "임재영 & 유지영 결혼합니다",
+    description: "2026년 11월 7일 토요일 오후 5시 | 천호 라비니움",
+    images: ["/images/gallery/f1.jpg"],
+  },
 };
 
 export default function RootLayout({
