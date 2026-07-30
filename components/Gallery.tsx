@@ -186,6 +186,11 @@ export function Gallery() {
           <Photo name="h4.jpg" aspect="aspect-[2/1]" objectPosition="50% 25%" />
         </FadeIn>
 
+        {/* 9. 18번 사진 마지막으로 크게 배치 */}
+        <FadeIn className="w-[85%] mx-auto mb-32">
+          <Photo name="18.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+        </FadeIn>
+
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
           <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
