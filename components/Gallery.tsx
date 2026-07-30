@@ -140,24 +140,57 @@ export function Gallery() {
           </div>
         </FadeIn>
 
-        {/* 4.5. 16번 사진 위 작은 사진 5장 배치 (임시 레이아웃) */}
-        <FadeIn className="w-[90%] mx-auto mt-20 mb-12">
-          {/* 상단 3장 */}
-          <div className="grid grid-cols-3 gap-2 mb-2">
-            <Photo name="10.jpg" aspect="aspect-[4/5]" />
-            <Photo name="11.jpg" aspect="aspect-[4/5]" />
-            <Photo name="12.jpg" aspect="aspect-[4/5]" />
+        {/* 5. 16번 사진 크게 배치 + 위에 작게 둥둥 떠다니는 5장 콜라주 */}
+        <FadeIn className="relative w-[85%] mx-auto mt-24 mb-32">
+          {/* 메인 16번 사진 */}
+          <div className="w-full">
+            <Photo name="16.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           </div>
-          {/* 하단 2장 */}
-          <div className="grid grid-cols-2 gap-2">
-            <Photo name="13.jpg" aspect="aspect-[4/5]" />
-            <Photo name="15.jpg" aspect="aspect-[4/5]" />
-          </div>
-        </FadeIn>
+          
+          {/* 플로팅 사진 1 (좌측 상단) */}
+          <motion.div 
+            animate={{ y: [0, -8, 0] }} 
+            transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
+            className="absolute top-4 -left-6 w-[25%] z-20 shadow-xl p-1 bg-white rounded-[1px] rotate-[-5deg]"
+          >
+            <Photo name="10.jpg" aspect="aspect-[3/4]" />
+          </motion.div>
 
-        {/* 5. 단독 크게 배치 (16번 사진) */}
-        <FadeIn className="w-[90%] mx-auto mt-16 mb-24">
-          <Photo name="16.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+          {/* 플로팅 사진 2 (우측 상단) */}
+          <motion.div 
+            animate={{ y: [0, 8, 0] }} 
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }}
+            className="absolute top-12 -right-5 w-[25%] z-20 shadow-xl p-1 bg-white rounded-[1px] rotate-[8deg]"
+          >
+            <Photo name="11.jpg" aspect="aspect-[3/4]" />
+          </motion.div>
+
+          {/* 플로팅 사진 3 (좌측 하단) */}
+          <motion.div 
+            animate={{ y: [0, -6, 0] }} 
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
+            className="absolute bottom-20 -left-4 w-[28%] z-20 shadow-xl p-1 bg-white rounded-[1px] rotate-[3deg]"
+          >
+            <Photo name="12.jpg" aspect="aspect-[4/5]" />
+          </motion.div>
+
+          {/* 플로팅 사진 4 (우측 하단) */}
+          <motion.div 
+            animate={{ y: [0, 10, 0] }} 
+            transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut", delay: 1.5 }}
+            className="absolute bottom-6 -right-6 w-[26%] z-20 shadow-xl p-1 bg-white rounded-[1px] rotate-[-6deg]"
+          >
+            <Photo name="13.jpg" aspect="aspect-[3/4]" />
+          </motion.div>
+          
+          {/* 플로팅 사진 5 (중앙 우측) */}
+          <motion.div 
+            animate={{ y: [0, -10, 0] }} 
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 2 }}
+            className="absolute top-1/2 -translate-y-1/2 -right-8 w-[22%] z-20 shadow-xl p-1 bg-white rounded-[1px] rotate-[10deg]"
+          >
+            <Photo name="15.jpg" aspect="aspect-square" />
+          </motion.div>
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
