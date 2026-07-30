@@ -130,7 +130,7 @@ export function Gallery() {
         <FadeIn className="flex justify-between gap-4 w-[90%] mx-auto px-4 mt-20 mb-32">
           <div className="flex flex-col gap-4 w-[48%]">
             <Photo name="6.jpg" aspect="aspect-[2/3]" />
-            <Photo name="7.jpg" aspect="aspect-[2/3]" />
+            <Photo name="9-2.jpg" aspect="aspect-[2/3]" />
           </div>
           <div className="flex flex-col gap-4 w-[48%] mt-16">
             <Photo name="7-2.jpg" aspect="aspect-[2/3]" />
@@ -160,7 +160,7 @@ export function Gallery() {
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
             className="absolute -bottom-10 -right-6 w-[45%] z-20 shadow-2xl p-1 bg-white rounded-[1px] rotate-[6deg]"
           >
-            <Photo name="9-2.jpg" aspect="aspect-[2/3]" />
+            <Photo name="7.jpg" aspect="aspect-[2/3]" />
           </motion.div>
         </FadeIn>
 
