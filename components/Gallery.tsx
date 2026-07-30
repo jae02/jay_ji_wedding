@@ -175,7 +175,7 @@ export function Gallery() {
         </FadeIn>
 
         {/* 7. 우측 정렬 3칸 배치 (h1, h2, h3) */}
-        <FadeIn className="ml-auto w-[75%] mb-24 grid grid-cols-3 gap-2 pr-4">
+        <FadeIn className="ml-auto w-[75%] mb-2 grid grid-cols-3 gap-2 pr-4">
           <Photo name="h1.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           <Photo name="h2.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           <Photo name="h3.jpg" aspect="aspect-[2/3]" objectPosition="center" />
