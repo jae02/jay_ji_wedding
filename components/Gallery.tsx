@@ -219,7 +219,7 @@ export function Gallery() {
                 .map((name, i) => (
                   <div
                     key={i}
-                    className="flex-shrink-0 w-[70%] sm:w-[50%] md:w-[40%] min-w-0 px-4 pt-6 pb-4"
+                    className="flex-shrink-0 w-[35%] sm:w-[25%] md:w-[20%] min-w-0 px-2 pt-6 pb-4"
                   >
                     <div
                       className={`bg-white p-3 pb-12 shadow-[0_10px_40px_-5px_rgba(0,0,0,0.2)] border border-black/5 rounded-[2px] relative transition-transform hover:scale-[1.02] ${i % 2 === 0 ? 'rotate-[3deg]' : 'rotate-[-3deg]'}`}
