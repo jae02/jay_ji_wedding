@@ -60,8 +60,6 @@ export function Gallery() {
     "/images/gallery/9.jpg",
     "/images/gallery/f1.jpg",
     "/images/gallery/h10.jpg",
-    "/images/gallery/i1.jpg",
-    "/images/gallery/i2.jpg",
     "/images/gallery/i3.jpg",
     "/images/gallery/i4.jpg"
   ];
@@ -208,7 +206,7 @@ export function Gallery() {
                       "1.jpg", "2.jpg", "3.jpg", "3-1.jpg", "4.jpg", "5.jpg", "8.jpg",
                       "6.jpg", "7.jpg", "7-2.jpg", "7-1.jpg", "16.jpg", "11.jpg", "12.jpg",
                       "13.jpg", "14.jpg", "h8.jpg", "h1.jpg", "h2.jpg", "h3.jpg", "h4.jpg",
-                      "18.jpg",
+                      "18.jpg", "f1.jpg",
                     ].includes(name)
                 )
                 .map((name, i) => (
