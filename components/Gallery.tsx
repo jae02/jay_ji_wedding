@@ -183,7 +183,7 @@ export function Gallery() {
 
         {/* 8. h4번 사진 단독 크게 배치 */}
         <FadeIn className="ml-auto w-[75%] mb-32 pr-4">
-          <Photo name="h4.jpg" aspect="aspect-[2/1]" objectPosition="top" />
+          <Photo name="h4.jpg" aspect="aspect-[2/1]" objectPosition="50% 25%" />
         </FadeIn>
 
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
