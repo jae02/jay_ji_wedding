@@ -52,10 +52,8 @@ export function Gallery() {
     "/images/gallery/15.jpg",
     "/images/gallery/17.jpg",
     "/images/gallery/2-1.jpg",
-    "/images/gallery/20-1.jpg",
     "/images/gallery/20.jpg",
     "/images/gallery/5-1.jpg",
-    "/images/gallery/7-3.jpg",
     "/images/gallery/7-4.jpg",
     "/images/gallery/9-2.jpg",
     "/images/gallery/9.jpg",
@@ -64,8 +62,7 @@ export function Gallery() {
     "/images/gallery/i1.jpg",
     "/images/gallery/i2.jpg",
     "/images/gallery/i3.jpg",
-    "/images/gallery/i4.jpg",
-    "/images/gallery/KakaoTalk_20260729_211917422.jpg"
+    "/images/gallery/i4.jpg"
   ];
 
   const Photo = ({
