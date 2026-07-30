@@ -246,16 +246,6 @@ export function Gallery() {
           </button>
         </FadeIn>
 
-        {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
-        <div className="mt-16 px-1">
-          <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
-            {images.map((img, i) => (
-              <FadeIn key={i} delay={i * 0.03}>
-                <Photo name={img.split('/').pop()!} aspect="aspect-square" />
-              </FadeIn>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Lightbox / Fullscreen Image Viewer */}
