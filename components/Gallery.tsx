@@ -233,13 +233,13 @@ export function Gallery() {
           
           {/* 반투명 화살표 */}
           <button
-            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/50 text-black/60 shadow-md backdrop-blur-sm transition-opacity opacity-0 group-hover:opacity-100 hover:bg-white/80 z-30"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/70 text-black/80 shadow-md backdrop-blur-sm transition-opacity opacity-80 md:opacity-0 md:group-hover:opacity-100 hover:bg-white z-30"
             onClick={scrollPrev}
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
-            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/50 text-black/60 shadow-md backdrop-blur-sm transition-opacity opacity-0 group-hover:opacity-100 hover:bg-white/80 z-30"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/70 text-black/80 shadow-md backdrop-blur-sm transition-opacity opacity-80 md:opacity-0 md:group-hover:opacity-100 hover:bg-white z-30"
             onClick={scrollNext}
           >
             <ChevronRight className="w-6 h-6" />
