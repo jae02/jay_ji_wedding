@@ -191,6 +191,33 @@ export function Gallery() {
           <Photo name="18.jpg" aspect="aspect-[2/3]" objectPosition="center" />
         </FadeIn>
 
+        {/* 10. 남은 사진들 폴라로이드 가로 스크롤 (Carousel) */}
+        <FadeIn className="w-full mt-12 mb-32">
+          <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory px-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            {images
+              .map((img) => img.split("/").pop()!)
+              .filter(
+                (name) =>
+                  ![
+                    "1.jpg", "2.jpg", "3.jpg", "3-1.jpg", "4.jpg", "5.jpg", "8.jpg",
+                    "6.jpg", "7.jpg", "7-2.jpg", "7-1.jpg", "16.jpg", "11.jpg", "12.jpg",
+                    "13.jpg", "14.jpg", "h8.jpg", "h1.jpg", "h2.jpg", "h3.jpg", "h4.jpg",
+                    "18.jpg",
+                  ].includes(name)
+              )
+              .map((name, i) => (
+                <div
+                  key={i}
+                  className="flex-shrink-0 w-[55%] sm:w-[35%] md:w-[25%] snap-center"
+                >
+                  <div className="bg-white p-2 pb-10 shadow-[0_8px_30px_-5px_rgba(0,0,0,0.15)] border border-black/5 rounded-[2px] transition-transform hover:scale-[1.02] rotate-[-1deg] even:rotate-[2deg]">
+                    <Photo name={name} aspect="aspect-[2/3]" objectPosition="center" />
+                  </div>
+                </div>
+              ))}
+          </div>
+        </FadeIn>
+
         {/* 하단 썸네일 뷰 (전체 사진 작은 사이즈) */}
         <div className="mt-16 px-1">
           <div className="grid grid-cols-4 sm:grid-cols-5 gap-1">
