@@ -140,11 +140,11 @@ export function Gallery() {
           </div>
         </FadeIn>
 
-        {/* 5. 16번 사진 크게 배치 + 위에 작게 둥둥 떠다니는 4장 콜라주 */}
+        {/* 5. 13번 사진 크게 배치 + 위에 작게 둥둥 떠다니는 4장 콜라주 */}
         <FadeIn className="relative w-[85%] mx-auto mt-24 mb-32">
-          {/* 메인 16번 사진 */}
+          {/* 메인 13번 사진 */}
           <div className="w-full">
-            <Photo name="16.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+            <Photo name="13.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           </div>
           
 
@@ -165,7 +165,7 @@ export function Gallery() {
           </div>
           {/* 플로팅 사진 5 (좌측 상단) */}
           <div className="absolute top-6 left-4 w-[24%] z-20 shadow-lg rounded-[1px]">
-            <Photo name="13.jpg" aspect="aspect-[2/3]" objectPosition="center" />
+            <Photo name="16.jpg" aspect="aspect-[2/3]" objectPosition="center" />
           </div>
         </FadeIn>
 
