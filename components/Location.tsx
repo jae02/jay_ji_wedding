@@ -16,11 +16,11 @@ export function Location() {
   };
 
   const handleKakaoMap = () => {
-    window.open(`https://map.kakao.com/link/search/라비니움`);
+    window.open(`https://map.kakao.com/link/map/1101898247`);
   };
 
   const handleNaverMap = () => {
-    window.open(`https://map.naver.com/v5/search/라비니움`);
+    window.open(`https://map.naver.com/v5/search/천호 라비니움`);
   };
 
   return (
@@ -55,12 +55,12 @@ export function Location() {
               </div>
             ) : (
               <Map
-                center={{ lat: 37.5385, lng: 127.1246 }}
+                center={{ lat: 37.538465, lng: 127.122430 }}
                 style={{ width: "100%", height: "100%" }}
                 className="absolute inset-0"
-                level={4}
+                level={3}
               >
-                <MapMarker position={{ lat: 37.5385, lng: 127.1246 }}>
+                <MapMarker position={{ lat: 37.538465, lng: 127.122430 }}>
                   <div className="text-black text-xs p-1 font-medium text-center w-full min-w-[90px]">
                     천호 라비니움
                   </div>

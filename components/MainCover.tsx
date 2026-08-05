@@ -1,4 +1,5 @@
 import { FadeIn } from "@/components/ui/FadeIn";
+import { Heart } from "lucide-react";
 import Image from "next/image";
 
 export function MainCover() {
@@ -28,12 +29,12 @@ export function MainCover() {
         </FadeIn>
 
         <FadeIn delay={0.4} direction="up">
-          <h1 className="text-4xl md:text-5xl font-serif text-wedding-text mb-4">
+          <h1 className="text-4xl md:text-5xl font-serif text-wedding-text mb-4 flex items-center justify-center">
             {/* TODO: 신랑 이름 수정 */}
-            임재영
-            <span className="mx-4 text-wedding-pink-dark font-light">♡</span>
+            <span>임재영</span>
+            <Heart className="w-6 h-6 md:w-7 md:h-7 text-wedding-pink-dark stroke-1 inline-block mx-3 md:mx-4" />
             {/* TODO: 신부 이름 수정 */}
-            유지영
+            <span>유지영</span>
           </h1>
         </FadeIn>
 
