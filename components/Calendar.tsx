@@ -1,21 +1,30 @@
+"use client";
+
 import { FadeIn } from "@/components/ui/FadeIn";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
 export function Calendar() {
-  // TODO: 예식 날짜로 수정해주세요 (YYYY-MM-DD)
+  // 예식 날짜 (YYYY-MM-DD)
   const weddingDateStr = "2026-11-07";
-  const weddingDate = new Date(weddingDateStr);
-  const today = new Date();
-  
-  // D-Day 계산
-  const diffTime = weddingDate.getTime() - today.getTime();
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
-  const dDayText = diffDays > 0 
-    ? `D-${diffDays}` 
-    : diffDays === 0 
-      ? "D-Day" 
-      : `D+${Math.abs(diffDays)}`;
+  const [dDayText, setDDayText] = useState("");
+
+  useEffect(() => {
+    const weddingDate = new Date(weddingDateStr + "T00:00:00");
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const diffTime = weddingDate.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays > 0) {
+      setDDayText(`D-${diffDays}`);
+    } else if (diffDays === 0) {
+      setDDayText("D-Day");
+    } else {
+      setDDayText(`D+${Math.abs(diffDays)}`);
+    }
+  }, []);
 
   // 간단한 달력 생성 로직 (2026년 11월 기준)
   // 11월 1일은 일요일, 총 30일
