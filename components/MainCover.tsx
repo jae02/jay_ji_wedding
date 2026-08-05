@@ -31,7 +31,7 @@ export function MainCover() {
           <h1 className="text-4xl md:text-5xl font-serif text-wedding-text mb-4">
             {/* TODO: 신랑 이름 수정 */}
             임재영
-            <span className="mx-4 text-wedding-pink-dark font-light">♥</span>
+            <span className="mx-4 text-wedding-pink-dark font-light">♡</span>
             {/* TODO: 신부 이름 수정 */}
             유지영
           </h1>

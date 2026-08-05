@@ -70,9 +70,9 @@ export function Calendar() {
                   <div 
                     key={date} 
                     className={cn(
-                      "flex items-center justify-center w-8 h-8 mx-auto rounded-full",
+                      "flex items-center justify-center w-8 h-8 mx-auto relative",
                       isWeddingDay 
-                        ? "bg-wedding-pink-dark text-white font-semibold" 
+                        ? "text-white font-semibold" 
                         : isSunday 
                           ? "text-red-500" 
                           : isSaturday 
@@ -80,7 +80,10 @@ export function Calendar() {
                             : "text-wedding-text"
                     )}
                   >
-                    {date}
+                    {isWeddingDay && (
+                      <span className="absolute inset-0 flex items-center justify-center text-wedding-pink-dark text-[2rem] leading-none">♥</span>
+                    )}
+                    <span className={isWeddingDay ? "relative z-10 text-[11px]" : ""}>{date}</span>
                   </div>
                 );
               })}
