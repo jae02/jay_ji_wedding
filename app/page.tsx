@@ -6,10 +6,12 @@ import { Location } from "@/components/Location";
 import { AccountInfo } from "@/components/AccountInfo";
 import { ShareButton } from "@/components/ShareButton";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { MusicPlayer } from "@/components/MusicPlayer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between overflow-hidden">
+    <main className="flex min-h-screen flex-col items-center justify-between overflow-hidden relative">
+      <MusicPlayer />
       <MainCover />
       <Greeting />
       <Gallery />
