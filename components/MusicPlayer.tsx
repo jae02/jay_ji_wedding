@@ -40,7 +40,7 @@ export function MusicPlayer() {
       document.removeEventListener("touchstart", handleFirstInteraction);
       document.removeEventListener("scroll", handleFirstInteraction);
     };
-  }, [isPlaying]);
+  }, []);
 
   const togglePlay = () => {
     if (audioRef.current) {
