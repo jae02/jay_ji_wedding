@@ -67,10 +67,14 @@ export function Gallery() {
     name,
     aspect = "aspect-[3/4]",
     objectPosition = "center",
+    quality = 60,
+    isPriority = false,
   }: {
     name: string;
     aspect?: string;
     objectPosition?: string;
+    quality?: number;
+    isPriority?: boolean;
   }) => {
     // Find index from name dynamically
     const index = images.findIndex(img => img.endsWith("/" + name));
@@ -85,8 +89,10 @@ export function Gallery() {
         src={images[index]}
         alt={`Gallery ${index + 1}`}
         fill
+        quality={quality}
+        priority={isPriority}
         className="object-cover transition-transform duration-700 group-hover:scale-[1.03] contrast-[0.97] saturate-[0.95] sepia-[0.02]"
-        sizes="(max-width: 768px) 100vw, 500px"
+        sizes="(max-width: 768px) 50vw, 400px"
         style={{ objectPosition }}
       />
       {/* 필름 카메라 특유의 뿌옇고 따뜻한 질감을 위한 오버레이 (절반으로 더 약하게 조절) */}
@@ -102,10 +108,10 @@ export function Gallery() {
         {/* 0. 가장 상단에 f1, 2번 사진 */}
         <FadeIn className="flex justify-center gap-5 w-full px-5 mb-16">
           <div className="w-1/2 bg-white p-2 pb-8 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.08)] border border-black/5 rounded-[1px] transition-transform hover:scale-[1.02] cursor-pointer">
-            <Photo name="1.jpg" aspect="aspect-[2/3]" />
+            <Photo name="1.jpg" aspect="aspect-[2/3]" isPriority />
           </div>
           <div className="w-1/2 bg-white p-2 pb-8 shadow-[0_4px_20px_-5px_rgba(0,0,0,0.08)] border border-black/5 rounded-[1px] transition-transform hover:scale-[1.02] cursor-pointer mt-8">
-            <Photo name="2.jpg" aspect="aspect-[2/3]" />
+            <Photo name="2.jpg" aspect="aspect-[2/3]" isPriority />
           </div>
         </FadeIn>
 
@@ -300,6 +306,7 @@ export function Gallery() {
                 fill
                 className="object-contain"
                 sizes="100vw"
+                quality={100}
                 priority
               />
             </div>
