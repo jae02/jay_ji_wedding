@@ -11,6 +11,7 @@ export function Location() {
 
   const locationInfo = {
     name: "라비니움 (LABINIUM)",
+    hall: "1층 리츄얼 홀",
     address: "서울 송파구 천호대로 996 (청람빌딩)",
     tel: "02-472-7004",
   };
@@ -37,7 +38,8 @@ export function Location() {
 
         <FadeIn delay={0.2}>
           <div className="text-center mb-8">
-            <h3 className="font-serif text-lg mb-2">{locationInfo.name}</h3>
+            <h3 className="font-serif text-lg mb-1">{locationInfo.name}</h3>
+            <p className="text-wedding-text/80 text-sm font-medium mb-2">{locationInfo.hall}</p>
             <p className="text-wedding-text/80 text-sm">{locationInfo.address}</p>
             <p className="text-wedding-text/60 text-sm mt-1">Tel. {locationInfo.tel}</p>
           </div>
