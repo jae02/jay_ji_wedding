@@ -89,7 +89,7 @@ export function AccountInfo() {
     title: "신부측 계좌번호",
     accounts: [
       { bank: "기업은행", number: "411-095121-01-013", name: "유성용 (신부 아버지)" },
-      { bank: "우리은행", number: "1002-747-760729", name: "모정희 (신부 어머니)" },
+      { bank: "우리은행", number: "1002-747-160729", name: "모정희 (신부 어머니)" },
       { bank: "하나은행", number: "284-910287-90607", name: "유지영 (신부)" },
     ],
   };
